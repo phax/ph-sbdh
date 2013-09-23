@@ -31,17 +31,17 @@ import com.phloc.commons.jaxb.utils.AbstractJAXBMarshaller;
  * 
  * @author Philip Helger
  */
-public class SBDHMarshaller extends AbstractJAXBMarshaller <StandardBusinessDocumentHeader>
+public class SBDMarshaller extends AbstractJAXBMarshaller <StandardBusinessDocument>
 {
-  public SBDHMarshaller ()
+  public SBDMarshaller ()
   {
-    super (StandardBusinessDocumentHeader.class, true ? (List <? extends IReadableResource>) null : CSBDH.SBDH_XSDS);
+    super (StandardBusinessDocument.class, true ? (List <? extends IReadableResource>) null : CSBDH.SBDH_XSDS);
   }
 
   @Override
   @Nonnull
-  protected final JAXBElement <StandardBusinessDocumentHeader> wrapObject (final StandardBusinessDocumentHeader aInvoice)
+  protected final JAXBElement <StandardBusinessDocument> wrapObject (final StandardBusinessDocument aInvoice)
   {
-    return new ObjectFactory ().createStandardBusinessDocumentHeader (aInvoice);
+    return new ObjectFactory ().createStandardBusinessDocument (aInvoice);
   }
 }
