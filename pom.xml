@@ -22,9 +22,10 @@
   </licenses>
      
   <scm>
-    <url>http://code.google.com/p/phloc-ubl/source/browse/</url>
-    <connection>scm:svn:http://phloc-ubl.googlecode.com/svn/trunk/phloc-sbdh</connection>
-    <developerConnection>scm:svn:https://phloc-ubl.googlecode.com/svn/trunk/phloc-sbdh</developerConnection>
+    <connection>scm:git:git@github.com:phax/phloc-sbdh.git</connection>
+    <developerConnection>scm:git:git@github.com:phax/phloc-sbdh.git</developerConnection>
+    <url>http://github.com/phax/phloc-sbdh</url>
+    <tag>HEAD</tag>
   </scm>
 
   <organization>
