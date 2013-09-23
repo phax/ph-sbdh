@@ -8,7 +8,7 @@
     <relativePath>../phloc-parent-pom/pom.xml</relativePath>
   </parent>
   <artifactId>phloc-sbdh</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.0</version>
   <packaging>bundle</packaging>
   <name>phloc-sbdh</name>
   <url>http://repo.phloc.com/apidocs/phloc-sbdh/${project.version}</url>
@@ -25,7 +25,7 @@
     <connection>scm:git:git@github.com:phax/phloc-sbdh.git</connection>
     <developerConnection>scm:git:git@github.com:phax/phloc-sbdh.git</developerConnection>
     <url>http://github.com/phax/phloc-sbdh</url>
-    <tag>HEAD</tag>
+    <tag>phloc-sbdh-1.0.0</tag>
   </scm>
 
   <organization>
