@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.phloc</groupId>
+    <artifactId>parent-pom</artifactId>
+    <version>22.5</version>
+    <relativePath>../phloc-parent-pom/pom.xml</relativePath>
+  </parent>
+  <artifactId>phloc-sbdh</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>bundle</packaging>
+  <name>phloc-sbdh</name>
+  <url>http://repo.phloc.com/apidocs/phloc-sbdh/${project.version}</url>
+  
+  <licenses>
+    <license>
+      <name>Apache 2</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+     
+  <scm>
+    <url>http://code.google.com/p/phloc-ubl/source/browse/</url>
+    <connection>scm:svn:http://phloc-ubl.googlecode.com/svn/trunk/phloc-sbdh</connection>
+    <developerConnection>scm:svn:https://phloc-ubl.googlecode.com/svn/trunk/phloc-sbdh</developerConnection>
+  </scm>
+
+  <organization>
+    <name>phloc systems</name>
+    <url>http://www.phloc.com</url>
+  </organization>
+
+  <developers>
+    <developer>
+      <id>philip</id>
+      <name>Philip Helger</name>
+      <email>ph(at)phloc.com</email>
+      <url>http://www.phloc.com</url>
+      <organization>phloc systems</organization>
+    </developer>
+  </developers>
+  
+  <repositories>
+    <repository>
+      <id>phloc.com</id>
+      <url>http://repo.phloc.com/maven2</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+
+  <pluginRepositories>
+    <pluginRepository>
+      <id>phloc.com</id>
+      <url>http://repo.phloc.com/maven2</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </pluginRepository>
+  </pluginRepositories>  
+
+  <distributionManagement>
+    <repository>
+      <id>repo.phloc.public</id>
+      <url>sftp://www.phloc.com/var/www/html-repo/maven2</url>
+    </repository>
+  </distributionManagement>
+
+  <properties>
+    <jaxb.version>2.1.13</jaxb.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.phloc</groupId>
+      <artifactId>phloc-commons</artifactId>
+      <version>4.0.10</version>
+    </dependency>
+    <dependency>
+      <groupId>com.sun.xml.bind</groupId>
+      <artifactId>jaxb-impl</artifactId>
+      <version>${jaxb.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <extensions>true</extensions>
+        <configuration>
+          <instructions>
+            <Export-Package>
+              org.unece.cefact.namespaces.sbdh.*
+            </Export-Package>
+          </instructions>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>com.mycila.maven-license-plugin</groupId>
+        <artifactId>maven-license-plugin</artifactId>
+        <configuration>
+          <excludes>
+            <exclude>src/main/resources/schemas/**</exclude>
+            <exclude>src/test/resources/examples/**</exclude>
+          </excludes>
+        </configuration>
+      </plugin>
+      <plugin>
+        <!-- JAXB 2.2.7 for generation (source encoding!); 2.1.x for execution -->
+        <groupId>org.jvnet.jaxb2.maven2</groupId>
+        <artifactId>maven-jaxb2-plugin</artifactId>
+        <version>0.8.3</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>generate</goal>
+            </goals>
+            <configuration>
+              <generateDirectory>${project.build.directory}/generated-sources/sbdh</generateDirectory>
+              <schemaDirectory>${basedir}/src/main/resources/schemas/sbdh</schemaDirectory>
+              <schemaIncludes>
+                <schemaInclude>StandardBusinessDocumentHeader.xsd</schemaInclude>
+              </schemaIncludes>
+              <bindingIncludes>
+                <bindingInclude>bindings.xjb</bindingInclude>
+              </bindingIncludes>
+            </configuration>
+          </execution>
+        </executions>
+        <configuration>
+          <bindingDirectory>${basedir}/src/main/jaxb</bindingDirectory>
+          <extension>true</extension>
+          <specVersion>2.1</specVersion>
+          <args>
+            <arg>-no-header</arg>
+            <arg>-Xphloc-default-locale</arg>
+            <arg>en_US</arg>
+            <arg>-Xphloc-annotate</arg>
+            <arg>-Xphloc-fields-private</arg>
+            <arg>-Xphloc-code-quality</arg>
+            <!-- 
+            <arg>-Xphloc-implements</arg><arg>java.io.Serializable</arg>
+            --> 
+            <arg>-Xphloc-equalshashcode</arg>
+            <arg>-Xphloc-tostring</arg>
+            <arg>-Xphloc-list-extension</arg>
+          </args>
+        </configuration>
+        <dependencies>
+          <dependency>
+            <groupId>com.sun.xml.bind</groupId>
+            <artifactId>jaxb-impl</artifactId>
+            <version>2.2.7</version>
+          </dependency>
+          <dependency>
+            <groupId>com.sun.xml.bind</groupId>
+            <artifactId>jaxb-xjc</artifactId>
+            <version>2.2.7</version>
+          </dependency>
+          <dependency>
+            <groupId>com.phloc</groupId>
+            <artifactId>phloc-jaxb22-plugin</artifactId>
+            <version>2.2.7.4</version>
+          </dependency>            
+        </dependencies>
+      </plugin>
+    </plugins>
+  </build>
+</project>
