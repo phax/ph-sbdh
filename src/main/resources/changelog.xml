@@ -20,5 +20,6 @@
 -->
 <changelog xmlns="http://www.phloc.com/ns/changelog/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.phloc.com/ns/changelog/1.0 schemas/changelog-1.0.xsd" version="1.0" component="phloc-sbdh">
+  <release date="2013-09-23" version="1.0.0" />
   <!-- Changelog started -->
 </changelog>

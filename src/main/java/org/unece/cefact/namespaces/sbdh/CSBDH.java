@@ -34,13 +34,11 @@ import com.phloc.commons.io.resource.ClassPathResource;
 @Immutable
 public final class CSBDH
 {
-  /** XML Schema resources for SBDH 1.3 */
-  public static final List <? extends IReadableResource> SBDH_XSDS = ContainerHelper.newUnmodifiableList (new ClassPathResource ("/schemas/sbdh/BasicTypes.xsd"),
-                                                                                                          new ClassPathResource ("/schemas/sbdh/DocumentIdentification.xsd"),
-                                                                                                          new ClassPathResource ("/schemas/sbdh/Partner.xsd"),
-                                                                                                          new ClassPathResource ("/schemas/sbdh/Manifest.xsd"),
-                                                                                                          new ClassPathResource ("/schemas/sbdh/BusinessScope.xsd"),
-                                                                                                          new ClassPathResource ("/schemas/sbdh/StandardBusinessDocumentHeader.xsd"));
+  /**
+   * XML Schema resources for SBDH 1.3 - sine include is used, the other schemas
+   * must not be specified.
+   */
+  public static final List <? extends IReadableResource> SBDH_XSDS = ContainerHelper.newUnmodifiableList (new ClassPathResource ("/schemas/sbdh/StandardBusinessDocumentHeader.xsd"));
 
   /** Namespace URI for SBDH 1.3 */
   public static final String SBDH_NS = "http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader";

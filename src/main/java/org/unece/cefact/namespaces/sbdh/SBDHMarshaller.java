@@ -35,7 +35,7 @@ public class SBDHMarshaller extends AbstractJAXBMarshaller <StandardBusinessDocu
 {
   public SBDHMarshaller ()
   {
-    super (StandardBusinessDocumentHeader.class, true ? (List <? extends IReadableResource>) null : CSBDH.SBDH_XSDS);
+    super (StandardBusinessDocumentHeader.class, false ? (List <? extends IReadableResource>) null : CSBDH.SBDH_XSDS);
   }
 
   @Override

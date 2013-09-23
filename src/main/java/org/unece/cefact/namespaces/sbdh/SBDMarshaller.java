@@ -26,7 +26,7 @@ import com.phloc.commons.io.IReadableResource;
 import com.phloc.commons.jaxb.utils.AbstractJAXBMarshaller;
 
 /**
- * This is the reader and writer for SBDH 1.3 documents. This class may be
+ * This is the reader and writer for SBD 1.3 documents. This class may be
  * derived to override protected methods from {@link AbstractJAXBMarshaller}.
  * 
  * @author Philip Helger
@@ -35,7 +35,7 @@ public class SBDMarshaller extends AbstractJAXBMarshaller <StandardBusinessDocum
 {
   public SBDMarshaller ()
   {
-    super (StandardBusinessDocument.class, true ? (List <? extends IReadableResource>) null : CSBDH.SBDH_XSDS);
+    super (StandardBusinessDocument.class, false ? (List <? extends IReadableResource>) null : CSBDH.SBDH_XSDS);
   }
 
   @Override
