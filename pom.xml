@@ -8,7 +8,7 @@
     <relativePath>../phloc-parent-pom/pom.xml</relativePath>
   </parent>
   <artifactId>phloc-sbdh</artifactId>
-  <version>1.0.2-SNAPSHOT</version>
+  <version>1.0.1-SNAPSHOT</version>
   <packaging>bundle</packaging>
   <name>phloc-sbdh</name>
   <description>Library for reading and writing OASIS Standard Business Document Header (SBDH) documents</description>
