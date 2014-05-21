@@ -8,7 +8,7 @@
     <relativePath>../phloc-parent-pom/pom.xml</relativePath>
   </parent>
   <artifactId>phloc-sbdh</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.1-SNAPSHOT</version>
   <packaging>bundle</packaging>
   <name>phloc-sbdh</name>
   <description>Library for reading and writing OASIS Standard Business Document Header (SBDH) documents</description>
@@ -26,7 +26,7 @@
     <connection>scm:git:git@github.com:phax/phloc-sbdh.git</connection>
     <developerConnection>scm:git:git@github.com:phax/phloc-sbdh.git</developerConnection>
     <url>http://github.com/phax/phloc-sbdh</url>
-    <tag>phloc-sbdh-1.0.1</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <organization>
