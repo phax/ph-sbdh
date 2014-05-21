@@ -4,13 +4,14 @@
   <parent>
     <groupId>com.phloc</groupId>
     <artifactId>parent-pom</artifactId>
-    <version>22.7</version>
+    <version>23.1</version>
     <relativePath>../phloc-parent-pom/pom.xml</relativePath>
   </parent>
   <artifactId>phloc-sbdh</artifactId>
   <version>1.0.1-SNAPSHOT</version>
   <packaging>bundle</packaging>
   <name>phloc-sbdh</name>
+  <description>Library for reading and writing OASIS Standard Business Document Header (SBDH) documents</description>
   <url>http://repo.phloc.com/apidocs/phloc-sbdh/${project.version}</url>
   
   <licenses>
@@ -43,38 +44,6 @@
     </developer>
   </developers>
   
-  <repositories>
-    <repository>
-      <id>phloc.com</id>
-      <url>http://repo.phloc.com/maven2</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </repository>
-  </repositories>
-
-  <pluginRepositories>
-    <pluginRepository>
-      <id>phloc.com</id>
-      <url>http://repo.phloc.com/maven2</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </pluginRepository>
-  </pluginRepositories>  
-
-  <distributionManagement>
-    <repository>
-      <id>repo.phloc.public</id>
-      <url>sftp://www.phloc.com:23040/var/www/html-repo/maven2</url>
-    </repository>
-  </distributionManagement>
 
   <properties>
     <jaxb.version>2.1.13</jaxb.version>
@@ -84,7 +53,7 @@
     <dependency>
       <groupId>com.phloc</groupId>
       <artifactId>phloc-commons</artifactId>
-      <version>4.3.1</version>
+      <version>4.3.3</version>
     </dependency>
     <dependency>
       <groupId>com.sun.xml.bind</groupId>
@@ -129,7 +98,7 @@
         <!-- JAXB 2.2.7 for generation (source encoding!); 2.1.x for execution -->
         <groupId>org.jvnet.jaxb2.maven2</groupId>
         <artifactId>maven-jaxb2-plugin</artifactId>
-        <version>0.8.3</version>
+        <version>0.9.0</version>
         <executions>
           <execution>
             <goals>
@@ -180,7 +149,7 @@
           <dependency>
             <groupId>com.phloc</groupId>
             <artifactId>phloc-jaxb22-plugin</artifactId>
-            <version>2.2.7.4</version>
+            <version>2.2.7.5</version>
           </dependency>            
         </dependencies>
       </plugin>
