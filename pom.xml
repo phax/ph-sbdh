@@ -7,10 +7,11 @@
     <version>23.1</version>
     <relativePath>../phloc-parent-pom/pom.xml</relativePath>
   </parent>
-  <artifactId>phloc-sbdh</artifactId>
+  <groupId>com.helger</groupId>
+  <artifactId>ph-sbdh</artifactId>
   <version>1.0.2-SNAPSHOT</version>
   <packaging>bundle</packaging>
-  <name>phloc-sbdh</name>
+  <name>ph-sbdh</name>
   <description>Library for reading and writing OASIS Standard Business Document Header (SBDH) documents</description>
   <url>http://repo.phloc.com/apidocs/phloc-sbdh/${project.version}</url>
   
@@ -23,9 +24,9 @@
   </licenses>
      
   <scm>
-    <connection>scm:git:git@github.com:phax/phloc-sbdh.git</connection>
-    <developerConnection>scm:git:git@github.com:phax/phloc-sbdh.git</developerConnection>
-    <url>http://github.com/phax/phloc-sbdh</url>
+    <connection>scm:git:git@github.com:phax/ph-sbdh.git</connection>
+    <developerConnection>scm:git:git@github.com:phax/ph-sbdh.git</developerConnection>
+    <url>http://github.com/phax/ph-sbdh</url>
     <tag>HEAD</tag>
   </scm>
 
