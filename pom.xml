@@ -25,7 +25,7 @@
     <version>1.1</version>
   </parent>
   <artifactId>ph-sbdh</artifactId>
-  <version>1.0.2-SNAPSHOT</version>
+  <version>1.1.0-SNAPSHOT</version>
   <packaging>bundle</packaging>
   <name>ph-sbdh</name>
   <description>Library for reading and writing OASIS Standard Business Document (SBD) and Standard Business Document Header (SBDH) documents</description>
@@ -67,9 +67,9 @@
 
   <dependencies>
     <dependency>
-      <groupId>com.phloc</groupId>
-      <artifactId>phloc-commons</artifactId>
-      <version>4.3.5</version>
+      <groupId>com.helger</groupId>
+      <artifactId>ph-commons</artifactId>
+      <version>5.0.0</version>
     </dependency>
     <dependency>
       <groupId>com.sun.xml.bind</groupId>
@@ -138,17 +138,17 @@
           <specVersion>2.1</specVersion>
           <args>
             <arg>-no-header</arg>
-            <arg>-Xphloc-default-locale</arg>
+            <arg>-Xph-default-locale</arg>
             <arg>en_US</arg>
-            <arg>-Xphloc-annotate</arg>
-            <arg>-Xphloc-fields-private</arg>
-            <arg>-Xphloc-code-quality</arg>
+            <arg>-Xph-annotate</arg>
+            <arg>-Xph-fields-private</arg>
+            <arg>-Xph-code-quality</arg>
             <!-- 
-            <arg>-Xphloc-implements</arg><arg>java.io.Serializable</arg>
+            <arg>-Xph-implements</arg><arg>java.io.Serializable</arg>
             --> 
-            <arg>-Xphloc-equalshashcode</arg>
-            <arg>-Xphloc-tostring</arg>
-            <arg>-Xphloc-list-extension</arg>
+            <arg>-Xph-equalshashcode</arg>
+            <arg>-Xph-tostring</arg>
+            <arg>-Xph-list-extension</arg>
           </args>
         </configuration>
         <dependencies>
@@ -163,9 +163,9 @@
             <version>2.2.7</version>
           </dependency>
           <dependency>
-            <groupId>com.phloc</groupId>
-            <artifactId>phloc-jaxb22-plugin</artifactId>
-            <version>2.2.7.5</version>
+            <groupId>com.helger</groupId>
+            <artifactId>ph-jaxb22-plugin</artifactId>
+            <version>2.2.7</version>
           </dependency>            
         </dependencies>
       </plugin>
