@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-    Copyright (C) 2013-2014 Philip Helger
+    Copyright (C) 2014 Philip Helger (www.helger.com)
     philip[at]helger[dot]com
 
     Licensed under the Apache License, Version 2.0 (the "License");
@@ -30,6 +30,7 @@
   <name>ph-sbdh</name>
   <description>Library for reading and writing OASIS Standard Business Document (SBD) and Standard Business Document Header (SBDH) documents</description>
   <url>https://github.com/phax/ph-sbdh</url>
+  <inceptionYear>2014</inceptionYear>
   
   <licenses>
     <license>
@@ -59,7 +60,6 @@
       <url>http://www.helger.com</url>
     </developer>
   </developers>
-  
 
   <properties>
     <jaxb.version>2.1.13</jaxb.version>
