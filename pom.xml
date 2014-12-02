@@ -97,6 +97,9 @@
             <Export-Package>
               org.unece.cefact.namespaces.sbdh.*
             </Export-Package>
+            <Import-Package>
+              !javax.annotation.*,*
+            </Import-Package>
           </instructions>
         </configuration>
       </plugin>
