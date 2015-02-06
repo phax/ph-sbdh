@@ -27,7 +27,7 @@ import com.helger.commons.io.resource.ClassPathResource;
 
 /**
  * Contains all the constants for SBDH handling.
- * 
+ *
  * @author Philip Helger
  */
 @Immutable
@@ -42,7 +42,6 @@ public final class CSBDH
   /** Namespace URI for SBDH 1.3 */
   public static final String SBDH_NS = "http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader";
 
-  @SuppressWarnings ("unused")
   @PresentForCodeCoverage
   private static final CSBDH s_aInstance = new CSBDH ();
 
