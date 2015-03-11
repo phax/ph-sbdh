@@ -21,7 +21,7 @@ import java.util.List;
 import javax.annotation.concurrent.Immutable;
 
 import com.helger.commons.annotations.PresentForCodeCoverage;
-import com.helger.commons.collections.ContainerHelper;
+import com.helger.commons.collections.CollectionHelper;
 import com.helger.commons.io.IReadableResource;
 import com.helger.commons.io.resource.ClassPathResource;
 
@@ -37,7 +37,7 @@ public final class CSBDH
    * XML Schema resources for SBDH 1.3 - sine include is used, the other schemas
    * must not be specified.
    */
-  public static final List <? extends IReadableResource> SBDH_XSDS = ContainerHelper.newUnmodifiableList (new ClassPathResource ("/schemas/sbdh/StandardBusinessDocumentHeader.xsd"));
+  public static final List <? extends IReadableResource> SBDH_XSDS = CollectionHelper.newUnmodifiableList (new ClassPathResource ("/schemas/sbdh/StandardBusinessDocumentHeader.xsd"));
 
   /** Namespace URI for SBDH 1.3 */
   public static final String SBDH_NS = "http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader";
