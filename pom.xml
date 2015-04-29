@@ -69,7 +69,7 @@
     <dependency>
       <groupId>com.helger</groupId>
       <artifactId>ph-commons</artifactId>
-      <version>5.6.1</version>
+      <version>5.7.0</version>
     </dependency>
     <dependency>
       <groupId>com.sun.xml.bind</groupId>
@@ -114,10 +114,9 @@
         </configuration>
       </plugin>
       <plugin>
-        <!-- JAXB 2.2.7 for generation (source encoding!); 2.1.x for execution -->
         <groupId>org.jvnet.jaxb2.maven2</groupId>
         <artifactId>maven-jaxb2-plugin</artifactId>
-        <version>0.11.0</version>
+        <version>0.12.3</version>
         <executions>
           <execution>
             <goals>
