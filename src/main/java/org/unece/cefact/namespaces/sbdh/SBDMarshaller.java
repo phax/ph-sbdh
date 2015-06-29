@@ -21,8 +21,8 @@ import java.util.List;
 import javax.annotation.Nonnull;
 import javax.xml.bind.JAXBElement;
 
-import com.helger.commons.io.IReadableResource;
-import com.helger.commons.jaxb.utils.AbstractJAXBMarshaller;
+import com.helger.commons.io.resource.IReadableResource;
+import com.helger.commons.jaxb.AbstractJAXBMarshaller;
 
 /**
  * This is the reader and writer for SBD 1.3 documents. This class may be

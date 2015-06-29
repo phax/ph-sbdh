@@ -20,10 +20,10 @@ import java.util.List;
 
 import javax.annotation.concurrent.Immutable;
 
-import com.helger.commons.annotations.PresentForCodeCoverage;
-import com.helger.commons.collections.CollectionHelper;
-import com.helger.commons.io.IReadableResource;
+import com.helger.commons.annotation.PresentForCodeCoverage;
+import com.helger.commons.collection.CollectionHelper;
 import com.helger.commons.io.resource.ClassPathResource;
+import com.helger.commons.io.resource.IReadableResource;
 
 /**
  * Contains all the constants for SBDH handling.
