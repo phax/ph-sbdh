@@ -18,6 +18,12 @@
 
 -->
 <changelog xmlns="http://www.helger.com/xsd/changelog/1.0" version="1.0" component="ph-sbdh">
+  <release date="2015-07-21" version="2.0.1" />
+  <entry date="2015-07-21" category="tech" action="update">
+    <change>
+      <text locale="en">Updated to ph-jaxb22-plugin 2.2.11.6 which fixes an invalid method name</text>
+    </change>
+  </entry>
   <release date="2015-07-21" version="2.0.0" />
   <entry date="2015-07-02" category="tech" action="update">
     <change>
