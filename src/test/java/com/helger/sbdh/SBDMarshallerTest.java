@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.unece.cefact.namespaces.sbdh;
+package com.helger.sbdh;
 
 import static org.junit.Assert.assertNotNull;
 
@@ -23,19 +23,20 @@ import java.io.File;
 import org.junit.Test;
 
 import com.helger.commons.io.file.iterate.FileSystemIterator;
+import com.helger.sbdh.SBDHMarshaller;
 
 /**
- * Test class for class {@link SBDMarshaller}.
+ * Test class for class {@link SBDHMarshaller}.
  * 
  * @author Philip Helger
  */
-public final class SBDHMarshallerTest
+public final class SBDMarshallerTest
 {
   @Test
   public void testReadAll ()
   {
-    for (final File aFile : new FileSystemIterator ("src/test/resources/examples/sbd"))
+    for (final File aFile : new FileSystemIterator ("src/test/resources/examples/sbdh"))
       if (aFile.isFile ())
-        assertNotNull (aFile.getAbsolutePath (), new SBDMarshaller ().read (aFile));
+        assertNotNull (aFile.getAbsolutePath (), new SBDHMarshaller ().read (aFile));
   }
 }

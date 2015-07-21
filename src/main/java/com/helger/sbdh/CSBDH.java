@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.unece.cefact.namespaces.sbdh;
+package com.helger.sbdh;
 
 import java.util.List;
 

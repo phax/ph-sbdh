@@ -14,33 +14,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.unece.cefact.namespaces.sbdh;
+package com.helger.sbdh;
 
 import java.util.List;
 
 import javax.annotation.Nonnull;
 import javax.xml.bind.JAXBElement;
 
+import org.unece.cefact.namespaces.sbdh.ObjectFactory;
+import org.unece.cefact.namespaces.sbdh.StandardBusinessDocument;
+
 import com.helger.commons.io.resource.IReadableResource;
 import com.helger.jaxb.AbstractJAXBMarshaller;
 
 /**
- * This is the reader and writer for SBDH 1.3 documents. This class may be
+ * This is the reader and writer for SBD 1.3 documents. This class may be
  * derived to override protected methods from {@link AbstractJAXBMarshaller}.
  * 
  * @author Philip Helger
  */
-public class SBDHMarshaller extends AbstractJAXBMarshaller <StandardBusinessDocumentHeader>
+public class SBDMarshaller extends AbstractJAXBMarshaller <StandardBusinessDocument>
 {
-  public SBDHMarshaller ()
+  public SBDMarshaller ()
   {
-    super (StandardBusinessDocumentHeader.class, false ? (List <? extends IReadableResource>) null : CSBDH.SBDH_XSDS);
+    super (StandardBusinessDocument.class, false ? (List <? extends IReadableResource>) null : CSBDH.SBDH_XSDS);
   }
 
   @Override
   @Nonnull
-  protected final JAXBElement <StandardBusinessDocumentHeader> wrapObject (final StandardBusinessDocumentHeader aInvoice)
+  protected final JAXBElement <StandardBusinessDocument> wrapObject (final StandardBusinessDocument aInvoice)
   {
-    return new ObjectFactory ().createStandardBusinessDocumentHeader (aInvoice);
+    return new ObjectFactory ().createStandardBusinessDocument (aInvoice);
   }
 }
