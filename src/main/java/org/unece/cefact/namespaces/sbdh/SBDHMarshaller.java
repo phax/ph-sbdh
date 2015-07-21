@@ -22,7 +22,7 @@ import javax.annotation.Nonnull;
 import javax.xml.bind.JAXBElement;
 
 import com.helger.commons.io.resource.IReadableResource;
-import com.helger.commons.jaxb.AbstractJAXBMarshaller;
+import com.helger.jaxb.AbstractJAXBMarshaller;
 
 /**
  * This is the reader and writer for SBDH 1.3 documents. This class may be

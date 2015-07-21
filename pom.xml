@@ -68,9 +68,10 @@
   <dependencies>
     <dependency>
       <groupId>com.helger</groupId>
-      <artifactId>ph-commons</artifactId>
-      <version>6.0.1</version>
+      <artifactId>ph-jaxb</artifactId>
+      <version>6.1.0</version>
     </dependency>
+    
     <dependency>
       <groupId>com.sun.xml.bind</groupId>
       <artifactId>jaxb-impl</artifactId>
