@@ -65,16 +65,26 @@
     <jaxb.version>2.1.13</jaxb.version>
   </properties>
 
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.helger</groupId>
+        <artifactId>ph-commons-parent-pom</artifactId>
+        <version>6.2.3</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
   <dependencies>
     <dependency>
       <groupId>com.helger</groupId>
       <artifactId>ph-commons</artifactId>
-      <version>6.2.1</version>
     </dependency>
     <dependency>
       <groupId>com.helger</groupId>
       <artifactId>ph-jaxb</artifactId>
-      <version>6.2.1</version>
     </dependency>
     
     <dependency>
