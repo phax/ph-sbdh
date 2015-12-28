@@ -16,28 +16,25 @@
  */
 package com.helger.sbdh;
 
-import java.util.List;
-
 import javax.annotation.Nonnull;
 import javax.xml.bind.JAXBElement;
 
 import org.unece.cefact.namespaces.sbdh.ObjectFactory;
 import org.unece.cefact.namespaces.sbdh.StandardBusinessDocumentHeader;
 
-import com.helger.commons.io.resource.IReadableResource;
 import com.helger.jaxb.AbstractJAXBMarshaller;
 
 /**
  * This is the reader and writer for SBDH 1.3 documents. This class may be
  * derived to override protected methods from {@link AbstractJAXBMarshaller}.
- * 
+ *
  * @author Philip Helger
  */
 public class SBDHMarshaller extends AbstractJAXBMarshaller <StandardBusinessDocumentHeader>
 {
   public SBDHMarshaller ()
   {
-    super (StandardBusinessDocumentHeader.class, false ? (List <? extends IReadableResource>) null : CSBDH.SBDH_XSDS);
+    super (StandardBusinessDocumentHeader.class, CSBDH.SBDH_XSDS);
   }
 
   @Override

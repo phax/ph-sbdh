@@ -23,11 +23,10 @@ import java.io.File;
 import org.junit.Test;
 
 import com.helger.commons.io.file.iterate.FileSystemIterator;
-import com.helger.sbdh.SBDMarshaller;
 
 /**
  * Test class for class {@link SBDMarshaller}.
- * 
+ *
  * @author Philip Helger
  */
 public final class SBDHMarshallerTest

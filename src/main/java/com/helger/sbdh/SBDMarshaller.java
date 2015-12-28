@@ -30,7 +30,7 @@ import com.helger.jaxb.AbstractJAXBMarshaller;
 /**
  * This is the reader and writer for SBD 1.3 documents. This class may be
  * derived to override protected methods from {@link AbstractJAXBMarshaller}.
- * 
+ *
  * @author Philip Helger
  */
 public class SBDMarshaller extends AbstractJAXBMarshaller <StandardBusinessDocument>
