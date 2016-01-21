@@ -16,15 +16,9 @@
  */
 package com.helger.sbdh;
 
-import java.util.List;
-
-import javax.annotation.Nonnull;
-import javax.xml.bind.JAXBElement;
-
 import org.unece.cefact.namespaces.sbdh.ObjectFactory;
 import org.unece.cefact.namespaces.sbdh.StandardBusinessDocument;
 
-import com.helger.commons.io.resource.IReadableResource;
 import com.helger.jaxb.AbstractJAXBMarshaller;
 
 /**
@@ -37,13 +31,8 @@ public class SBDMarshaller extends AbstractJAXBMarshaller <StandardBusinessDocum
 {
   public SBDMarshaller ()
   {
-    super (StandardBusinessDocument.class, false ? (List <? extends IReadableResource>) null : CSBDH.SBDH_XSDS);
-  }
-
-  @Override
-  @Nonnull
-  protected final JAXBElement <StandardBusinessDocument> wrapObject (final StandardBusinessDocument aInvoice)
-  {
-    return new ObjectFactory ().createStandardBusinessDocument (aInvoice);
+    super (StandardBusinessDocument.class,
+           CSBDH.SBDH_XSDS,
+           o -> new ObjectFactory ().createStandardBusinessDocument (o));
   }
 }

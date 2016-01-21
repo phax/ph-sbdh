@@ -16,9 +16,6 @@
  */
 package com.helger.sbdh;
 
-import javax.annotation.Nonnull;
-import javax.xml.bind.JAXBElement;
-
 import org.unece.cefact.namespaces.sbdh.ObjectFactory;
 import org.unece.cefact.namespaces.sbdh.StandardBusinessDocumentHeader;
 
@@ -34,13 +31,8 @@ public class SBDHMarshaller extends AbstractJAXBMarshaller <StandardBusinessDocu
 {
   public SBDHMarshaller ()
   {
-    super (StandardBusinessDocumentHeader.class, CSBDH.SBDH_XSDS);
-  }
-
-  @Override
-  @Nonnull
-  protected final JAXBElement <StandardBusinessDocumentHeader> wrapObject (final StandardBusinessDocumentHeader aInvoice)
-  {
-    return new ObjectFactory ().createStandardBusinessDocumentHeader (aInvoice);
+    super (StandardBusinessDocumentHeader.class,
+           CSBDH.SBDH_XSDS,
+           o -> new ObjectFactory ().createStandardBusinessDocumentHeader (o));
   }
 }
