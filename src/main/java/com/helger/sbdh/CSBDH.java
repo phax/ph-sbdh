@@ -42,7 +42,7 @@ public final class CSBDH
    * XML Schema resources for SBDH 1.3 - sine include is used, the other schemas
    * must not be specified.
    */
-  public static final List <? extends IReadableResource> SBDH_XSDS = CollectionHelper.newUnmodifiableList (new ClassPathResource (SBDH_XSD_PATH));
+  public static final List <? extends IReadableResource> SBDH_XSDS = CollectionHelper.makeUnmodifiable (new ClassPathResource (SBDH_XSD_PATH));
 
   /** Namespace URI for SBDH 1.3 */
   public static final String SBDH_NS = "http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader";
