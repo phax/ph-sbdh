@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.helger.sbdh;
+package com.helger.sbdh.builder;
 
 import javax.annotation.Nonnull;
 import javax.annotation.concurrent.NotThreadSafe;
@@ -25,38 +25,38 @@ import org.unece.cefact.namespaces.sbdh.StandardBusinessDocumentHeader;
 import com.helger.commons.annotation.PresentForCodeCoverage;
 
 /**
- * Write all SBDH document types.
+ * Read all SBDH document types.
  *
  * @author Philip Helger
  */
 @NotThreadSafe
-public final class SBDHWriter
+public final class SBDHReader
 {
   @PresentForCodeCoverage
-  private static final SBDHWriter s_aInstance = new SBDHWriter ();
+  private static final SBDHReader s_aInstance = new SBDHReader ();
 
-  private SBDHWriter ()
+  private SBDHReader ()
   {}
 
   /**
-   * Create a writer builder for StandardBusinessDocument.
+   * Create a reader builder for StandardBusinessDocument.
    *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
-  public static SBDHWriterBuilder <StandardBusinessDocument> standardBusinessDocument ()
+  public static SBDHReaderBuilder <StandardBusinessDocument> standardBusinessDocument ()
   {
-    return SBDHWriterBuilder.create (StandardBusinessDocument.class);
+    return SBDHReaderBuilder.create (StandardBusinessDocument.class);
   }
 
   /**
-   * Create a writer builder for StandardBusinessDocumentHeader.
+   * Create a reader builder for StandardBusinessDocumentHeader.
    *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
-  public static SBDHWriterBuilder <StandardBusinessDocumentHeader> standardBusinessDocumentHeader ()
+  public static SBDHReaderBuilder <StandardBusinessDocumentHeader> standardBusinessDocumentHeader ()
   {
-    return SBDHWriterBuilder.create (StandardBusinessDocumentHeader.class);
+    return SBDHReaderBuilder.create (StandardBusinessDocumentHeader.class);
   }
 }

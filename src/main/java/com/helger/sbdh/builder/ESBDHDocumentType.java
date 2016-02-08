@@ -14,13 +14,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.helger.sbdh;
+package com.helger.sbdh.builder;
 
 import java.util.List;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import javax.xml.namespace.QName;
 import javax.xml.validation.Schema;
 
 import org.unece.cefact.namespaces.sbdh.StandardBusinessDocument;
@@ -31,6 +30,7 @@ import com.helger.commons.annotation.ReturnsMutableCopy;
 import com.helger.commons.collection.CollectionHelper;
 import com.helger.jaxb.builder.IJAXBDocumentType;
 import com.helger.jaxb.builder.JAXBDocumentType;
+import com.helger.sbdh.CSBDH;
 
 /**
  * Enumeration with all available SBDH document types.
@@ -56,12 +56,6 @@ public enum ESBDHDocumentType implements IJAXBDocumentType
   }
 
   @Nonnull
-  public Package getPackage ()
-  {
-    return m_aDocType.getPackage ();
-  }
-
-  @Nonnull
   public String getLocalName ()
   {
     return m_aDocType.getLocalName ();
@@ -71,12 +65,6 @@ public enum ESBDHDocumentType implements IJAXBDocumentType
   public String getNamespaceURI ()
   {
     return m_aDocType.getNamespaceURI ();
-  }
-
-  @Nonnull
-  public QName getQName ()
-  {
-    return m_aDocType.getQName ();
   }
 
   @Nonnull

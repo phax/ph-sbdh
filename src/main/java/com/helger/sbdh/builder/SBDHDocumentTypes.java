@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.helger.sbdh;
+package com.helger.sbdh.builder;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -31,7 +31,7 @@ import com.helger.commons.collection.ArrayHelper;
 import com.helger.commons.collection.CollectionHelper;
 
 /**
- * UBL document type map. Provides sanity methods for accessing SBDH document
+ * SBDH document type map. Provides sanity methods for accessing SBDH document
  * types based on different information items.
  *
  * @author Philip Helger

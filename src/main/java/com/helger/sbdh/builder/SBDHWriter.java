@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.helger.sbdh;
+package com.helger.sbdh.builder;
 
 import javax.annotation.Nonnull;
 import javax.annotation.concurrent.NotThreadSafe;
@@ -25,38 +25,38 @@ import org.unece.cefact.namespaces.sbdh.StandardBusinessDocumentHeader;
 import com.helger.commons.annotation.PresentForCodeCoverage;
 
 /**
- * Validate all SBDH document types.
+ * Write all SBDH document types.
  *
  * @author Philip Helger
  */
 @NotThreadSafe
-public final class SBDHValidator
+public final class SBDHWriter
 {
   @PresentForCodeCoverage
-  private static final SBDHValidator s_aInstance = new SBDHValidator ();
+  private static final SBDHWriter s_aInstance = new SBDHWriter ();
 
-  private SBDHValidator ()
+  private SBDHWriter ()
   {}
 
   /**
-   * Create a validation builder for StandardBusinessDocument.
+   * Create a writer builder for StandardBusinessDocument.
    *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
-  public static SBDHValidatorBuilder <StandardBusinessDocument> standardBusinessDocument ()
+  public static SBDHWriterBuilder <StandardBusinessDocument> standardBusinessDocument ()
   {
-    return SBDHValidatorBuilder.create (StandardBusinessDocument.class);
+    return SBDHWriterBuilder.create (StandardBusinessDocument.class);
   }
 
   /**
-   * Create a validation builder for StandardBusinessDocumentHeader.
+   * Create a writer builder for StandardBusinessDocumentHeader.
    *
    * @return The builder and never <code>null</code>
    */
   @Nonnull
-  public static SBDHValidatorBuilder <StandardBusinessDocumentHeader> standardBusinessDocumentHeader ()
+  public static SBDHWriterBuilder <StandardBusinessDocumentHeader> standardBusinessDocumentHeader ()
   {
-    return SBDHValidatorBuilder.create (StandardBusinessDocumentHeader.class);
+    return SBDHWriterBuilder.create (StandardBusinessDocumentHeader.class);
   }
 }

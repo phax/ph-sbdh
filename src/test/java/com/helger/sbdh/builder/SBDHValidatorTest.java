@@ -14,9 +14,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.helger.sbdh;
+package com.helger.sbdh.builder;
 
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 
@@ -25,13 +26,15 @@ import org.unece.cefact.namespaces.sbdh.StandardBusinessDocument;
 import org.unece.cefact.namespaces.sbdh.StandardBusinessDocumentHeader;
 
 import com.helger.commons.io.file.iterate.FileSystemIterator;
+import com.helger.sbdh.builder.SBDHReader;
+import com.helger.sbdh.builder.SBDHValidator;
 
 /**
- * Test class for class {@link SBDHWriter}.
+ * Test class for class {@link SBDHValidator}.
  *
  * @author Philip Helger
  */
-public final class SBDHWriterTest
+public final class SBDHValidatorTest
 {
   @Test
   public void testSBD ()
@@ -41,7 +44,7 @@ public final class SBDHWriterTest
       {
         final StandardBusinessDocument aDoc = SBDHReader.standardBusinessDocument ().read (aFile);
         assertNotNull (aFile.getAbsolutePath (), aDoc);
-        assertNotNull (aFile.getAbsolutePath (), SBDHWriter.standardBusinessDocument ().getAsDocument (aDoc));
+        assertTrue (aFile.getAbsolutePath (), SBDHValidator.standardBusinessDocument ().isValid (aDoc));
       }
   }
 
@@ -53,7 +56,7 @@ public final class SBDHWriterTest
       {
         final StandardBusinessDocumentHeader aDoc = SBDHReader.standardBusinessDocumentHeader ().read (aFile);
         assertNotNull (aFile.getAbsolutePath (), aDoc);
-        assertNotNull (aFile.getAbsolutePath (), SBDHWriter.standardBusinessDocumentHeader ().getAsDocument (aDoc));
+        assertTrue (aFile.getAbsolutePath (), SBDHValidator.standardBusinessDocumentHeader ().isValid (aDoc));
       }
   }
 }
