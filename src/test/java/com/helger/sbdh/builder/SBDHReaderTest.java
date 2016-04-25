@@ -21,9 +21,11 @@ import static org.junit.Assert.assertNotNull;
 import java.io.File;
 
 import org.junit.Test;
+import org.unece.cefact.namespaces.sbdh.StandardBusinessDocument;
+import org.unece.cefact.namespaces.sbdh.StandardBusinessDocumentHeader;
 
 import com.helger.commons.io.file.iterate.FileSystemIterator;
-import com.helger.sbdh.builder.SBDHReader;
+import com.helger.commons.mock.CommonsTestHelper;
 
 /**
  * Test class for class {@link SBDHReader}.
@@ -37,7 +39,17 @@ public final class SBDHReaderTest
   {
     for (final File aFile : new FileSystemIterator ("src/test/resources/examples/sbd"))
       if (aFile.isFile ())
-        assertNotNull (aFile.getAbsolutePath (), SBDHReader.standardBusinessDocument ().read (aFile));
+      {
+        final StandardBusinessDocument aDoc = SBDHReader.standardBusinessDocument ().read (aFile);
+        assertNotNull (aFile.getAbsolutePath (), aDoc);
+        final String sDoc = SBDHWriter.standardBusinessDocument ().getAsString (aDoc);
+        assertNotNull (aFile.getAbsolutePath (), sDoc);
+        final StandardBusinessDocument aDoc2 = SBDHReader.standardBusinessDocument ().read (sDoc);
+        assertNotNull (aFile.getAbsolutePath (), aDoc2);
+
+        CommonsTestHelper.testEqualsImplementationWithEqualContentObject (aDoc, aDoc2);
+        CommonsTestHelper.testEqualsImplementationWithEqualContentObject (aDoc, aDoc.clone ());
+      }
   }
 
   @Test
@@ -45,6 +57,16 @@ public final class SBDHReaderTest
   {
     for (final File aFile : new FileSystemIterator ("src/test/resources/examples/sbdh"))
       if (aFile.isFile ())
-        assertNotNull (aFile.getAbsolutePath (), SBDHReader.standardBusinessDocumentHeader ().read (aFile));
+      {
+        final StandardBusinessDocumentHeader aDoc = SBDHReader.standardBusinessDocumentHeader ().read (aFile);
+        assertNotNull (aFile.getAbsolutePath (), aDoc);
+        final String sDoc = SBDHWriter.standardBusinessDocumentHeader ().getAsString (aDoc);
+        assertNotNull (aFile.getAbsolutePath (), sDoc);
+        final StandardBusinessDocumentHeader aDoc2 = SBDHReader.standardBusinessDocumentHeader ().read (sDoc);
+        assertNotNull (aFile.getAbsolutePath (), aDoc2);
+
+        CommonsTestHelper.testEqualsImplementationWithEqualContentObject (aDoc, aDoc2);
+        CommonsTestHelper.testEqualsImplementationWithEqualContentObject (aDoc, aDoc.clone ());
+      }
   }
 }
