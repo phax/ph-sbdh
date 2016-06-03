@@ -53,7 +53,7 @@ public class SBDHReaderBuilder <JAXBTYPE> extends JAXBReaderBuilder <JAXBTYPE, S
   @Nonnull
   public static <T> SBDHReaderBuilder <T> create (@Nonnull final Class <T> aClass)
   {
-    return new SBDHReaderBuilder <T> (aClass);
+    return new SBDHReaderBuilder <> (aClass);
   }
 
   /**
@@ -67,6 +67,6 @@ public class SBDHReaderBuilder <JAXBTYPE> extends JAXBReaderBuilder <JAXBTYPE, S
   @Nonnull
   public static SBDHReaderBuilder <?> createGeneric (@Nonnull final ESBDHDocumentType eDocType)
   {
-    return new SBDHReaderBuilder <Object> (eDocType, Object.class);
+    return new SBDHReaderBuilder <> (eDocType, Object.class);
   }
 }

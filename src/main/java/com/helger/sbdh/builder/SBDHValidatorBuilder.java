@@ -53,6 +53,6 @@ public class SBDHValidatorBuilder <JAXBTYPE> extends JAXBValidationBuilder <JAXB
   @Nonnull
   public static <T> SBDHValidatorBuilder <T> create (@Nonnull final Class <T> aClass)
   {
-    return new SBDHValidatorBuilder <T> (aClass);
+    return new SBDHValidatorBuilder <> (aClass);
   }
 }

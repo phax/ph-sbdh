@@ -59,6 +59,6 @@ public class SBDHWriterBuilder <JAXBTYPE> extends JAXBWriterBuilder <JAXBTYPE, S
   @Nonnull
   public static <T> SBDHWriterBuilder <T> create (@Nonnull final Class <T> aClass)
   {
-    return new SBDHWriterBuilder <T> (aClass);
+    return new SBDHWriterBuilder <> (aClass);
   }
 }
