@@ -19,8 +19,8 @@ package com.helger.sbdh.builder;
 import javax.annotation.Nonnull;
 import javax.annotation.concurrent.NotThreadSafe;
 
-import com.helger.commons.xml.namespace.MapBasedNamespaceContext;
 import com.helger.jaxb.builder.JAXBWriterBuilder;
+import com.helger.xml.namespace.MapBasedNamespaceContext;
 
 /**
  * A writer builder for SBDH documents.
