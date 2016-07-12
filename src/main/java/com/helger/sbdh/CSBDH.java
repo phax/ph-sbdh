@@ -34,13 +34,13 @@ import com.helger.commons.io.resource.IReadableResource;
 public final class CSBDH
 {
   /**
-   * XML Schema resources for SBDH 1.3 - sine include is used, the other schemas
-   * must not be specified.
+   * XML Schema resources for SBDH 1.3 - since include is used, the other
+   * schemas must not be specified.
    */
   public static final String SBDH_XSD_PATH = "/schemas/sbdh/StandardBusinessDocumentHeader.xsd";
   /**
-   * XML Schema resources for SBDH 1.3 - sine include is used, the other schemas
-   * must not be specified.
+   * XML Schema resources for SBDH 1.3 - since include is used, the other
+   * schemas must not be specified.
    */
   public static final List <? extends IReadableResource> SBDH_XSDS = CollectionHelper.makeUnmodifiable (new ClassPathResource (SBDH_XSD_PATH));
 
