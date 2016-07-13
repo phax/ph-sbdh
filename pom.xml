@@ -28,7 +28,7 @@
   <version>3.0.1-SNAPSHOT</version>
   <packaging>bundle</packaging>
   <name>ph-sbdh</name>
-  <description>Library for reading and writing OASIS Standard Business Document (SBD) and Standard Business Document Header (SBDH) documents</description>
+  <description>Library for reading and writing CEFACT Standard Business Document (SBD) and Standard Business Document Header (SBDH) documents</description>
   <url>https://github.com/phax/ph-sbdh</url>
   <inceptionYear>2014</inceptionYear>
   
