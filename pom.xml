@@ -31,7 +31,6 @@
   <description>Library for reading and writing CEFACT Standard Business Document (SBD) and Standard Business Document Header (SBDH) documents</description>
   <url>https://github.com/phax/ph-sbdh</url>
   <inceptionYear>2014</inceptionYear>
-  
   <licenses>
     <license>
       <name>Apache 2</name>
@@ -39,19 +38,16 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
-     
   <scm>
     <connection>scm:git:git@github.com:phax/ph-sbdh.git</connection>
     <developerConnection>scm:git:git@github.com:phax/ph-sbdh.git</developerConnection>
     <url>http://github.com/phax/ph-sbdh</url>
     <tag>HEAD</tag>
   </scm>
-
   <organization>
     <name>Philip Helger</name>
     <url>http://www.helger.com</url>
   </organization>
-
   <developers>
     <developer>
       <id>phax</id>
@@ -60,7 +56,6 @@
       <url>http://www.helger.com</url>
     </developer>
   </developers>
-
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -72,7 +67,6 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
-
   <dependencies>
     <dependency>
       <groupId>com.helger</groupId>
@@ -86,7 +80,6 @@
       <groupId>com.helger</groupId>
       <artifactId>ph-jaxb</artifactId>
     </dependency>
-    
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -98,8 +91,6 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-
-
   <build>
     <plugins>
       <plugin>
@@ -108,13 +99,9 @@
         <extensions>true</extensions>
         <configuration>
           <instructions>
-            <Export-Package>
-              com.helger.sbdh.*,
-              org.unece.cefact.namespaces.sbdh.*
-            </Export-Package>
-            <Import-Package>
-              !javax.annotation.*,*
-            </Import-Package>
+            <Export-Package>com.helger.sbdh.*,
+              org.unece.cefact.namespaces.sbdh.*</Export-Package>
+            <Import-Package>!javax.annotation.*,*</Import-Package>
           </instructions>
         </configuration>
       </plugin>
@@ -173,7 +160,7 @@
             <groupId>com.helger</groupId>
             <artifactId>ph-jaxb22-plugin</artifactId>
             <version>2.2.11.7</version>
-          </dependency>            
+          </dependency>
         </dependencies>
       </plugin>
     </plugins>
