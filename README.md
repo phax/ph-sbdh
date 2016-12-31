@@ -5,8 +5,14 @@ It supports easily reading and writing of SBD and SBDH between Java domain objec
 
 It is licensed under Apache 2.0 license.
 
-It requires at least Java 1.6.
-Versions >= 3 require Java 8.
+#News and noteworthy
+
+  * v3.0.1 - 2016-12-31
+    * Added default namespace prefix "sh" when writing (see #2)
+  * v3.0.0 - 2016-06-11
+    * Requires Java 8
+  * v2.0.1 - 2015-07-21
+    * Last Java 1.6 version  
 
 #Maven usage
 Add the following to your pom.xml to use this artifact:
@@ -14,7 +20,7 @@ Add the following to your pom.xml to use this artifact:
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-sbdh</artifactId>
-  <version>3.0.0</version>
+  <version>3.0.1</version>
 </dependency>
 ```
 
