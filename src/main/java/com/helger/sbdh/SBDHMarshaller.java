@@ -29,10 +29,23 @@ import com.helger.jaxb.AbstractJAXBMarshaller;
  */
 public class SBDHMarshaller extends AbstractJAXBMarshaller <StandardBusinessDocumentHeader>
 {
+  private final MapBasedNamespaceContext m_aNSContext;
+  
   public SBDHMarshaller ()
   {
     super (StandardBusinessDocumentHeader.class,
            CSBDH.SBDH_XSDS,
            o -> new ObjectFactory ().createStandardBusinessDocumentHeader (o));
+    m_aNSContext = new MapBasedNamespaceContext();
+    m_aNSContext.addMapping("sh", CSBDH.SBDH_NS);
   }
+  
+  @Override
+  protected void customizeMarshaller(final Marshaller aMarshaller) {
+        try {
+            JAXBMarshallerHelper.setSunNamespacePrefixMapper(aMarshaller, m_aNSContext);
+        } catch (final Throwable t) {
+            // Ignore
+        }
+    }  
 }
