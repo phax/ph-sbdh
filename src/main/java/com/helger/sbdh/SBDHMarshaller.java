@@ -20,6 +20,7 @@ import org.unece.cefact.namespaces.sbdh.ObjectFactory;
 import org.unece.cefact.namespaces.sbdh.StandardBusinessDocumentHeader;
 
 import com.helger.jaxb.AbstractJAXBMarshaller;
+import com.helger.xml.namespace.MapBasedNamespaceContext;
 
 /**
  * This is the reader and writer for SBDH 1.3 documents. This class may be
@@ -29,23 +30,14 @@ import com.helger.jaxb.AbstractJAXBMarshaller;
  */
 public class SBDHMarshaller extends AbstractJAXBMarshaller <StandardBusinessDocumentHeader>
 {
-  private final MapBasedNamespaceContext m_aNSContext;
-  
   public SBDHMarshaller ()
   {
     super (StandardBusinessDocumentHeader.class,
            CSBDH.SBDH_XSDS,
            o -> new ObjectFactory ().createStandardBusinessDocumentHeader (o));
-    m_aNSContext = new MapBasedNamespaceContext();
-    m_aNSContext.addMapping("sh", CSBDH.SBDH_NS);
+
+    final MapBasedNamespaceContext aNSContext = new MapBasedNamespaceContext ();
+    aNSContext.addMapping ("sh", CSBDH.SBDH_NS);
+    setNamespaceContext (aNSContext);
   }
-  
-  @Override
-  protected void customizeMarshaller(final Marshaller aMarshaller) {
-        try {
-            JAXBMarshallerHelper.setSunNamespacePrefixMapper(aMarshaller, m_aNSContext);
-        } catch (final Throwable t) {
-            // Ignore
-        }
-    }  
 }
