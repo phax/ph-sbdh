@@ -1,11 +1,11 @@
-#ph-sbdh
+# ph-sbdh
 
 CEFACT Standard Business Document (SBD) and Standard Business Document Header (SBDH) wrapper library.
 It supports easily reading and writing of SBD and SBDH between Java domain objects and XML representations.
 
 It is licensed under Apache 2.0 license.
 
-#News and noteworthy
+# News and noteworthy
 
   * v3.0.2 - 2017-01-09
     * Binds to ph-commons 8.6.0
@@ -16,7 +16,7 @@ It is licensed under Apache 2.0 license.
   * v2.0.1 - 2015-07-21
     * Last Java 1.6 version  
 
-#Maven usage
+# Maven usage
 Add the following to your pom.xml to use this artifact:
 ```
 <dependency>
