@@ -20,8 +20,9 @@ import java.util.List;
 
 import javax.annotation.concurrent.Immutable;
 
+import com.helger.commons.annotation.CodingStyleguideUnaware;
 import com.helger.commons.annotation.PresentForCodeCoverage;
-import com.helger.commons.collection.CollectionHelper;
+import com.helger.commons.collection.ext.CommonsArrayList;
 import com.helger.commons.io.resource.ClassPathResource;
 import com.helger.commons.io.resource.IReadableResource;
 
@@ -42,7 +43,8 @@ public final class CSBDH
    * XML Schema resources for SBDH 1.3 - since include is used, the other
    * schemas must not be specified.
    */
-  public static final List <? extends IReadableResource> SBDH_XSDS = CollectionHelper.makeUnmodifiable (new ClassPathResource (SBDH_XSD_PATH));
+  @CodingStyleguideUnaware
+  public static final List <? extends IReadableResource> SBDH_XSDS = new CommonsArrayList <> (new ClassPathResource (SBDH_XSD_PATH)).getAsUnmodifiable ();
 
   /** Namespace URI for SBDH 1.3 */
   public static final String SBDH_NS = "http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader";
