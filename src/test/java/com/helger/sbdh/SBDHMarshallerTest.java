@@ -22,7 +22,7 @@ import java.io.File;
 
 import org.junit.Test;
 
-import com.helger.commons.io.file.iterate.FileSystemIterator;
+import com.helger.commons.io.file.FileSystemIterator;
 
 /**
  * Test class for class {@link SBDMarshaller}.

@@ -25,9 +25,7 @@ import org.junit.Test;
 import org.unece.cefact.namespaces.sbdh.StandardBusinessDocument;
 import org.unece.cefact.namespaces.sbdh.StandardBusinessDocumentHeader;
 
-import com.helger.commons.io.file.iterate.FileSystemIterator;
-import com.helger.sbdh.builder.SBDHReader;
-import com.helger.sbdh.builder.SBDHValidator;
+import com.helger.commons.io.file.FileSystemIterator;
 
 /**
  * Test class for class {@link SBDHValidator}.

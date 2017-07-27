@@ -24,7 +24,7 @@ import org.junit.Test;
 import org.unece.cefact.namespaces.sbdh.StandardBusinessDocument;
 import org.unece.cefact.namespaces.sbdh.StandardBusinessDocumentHeader;
 
-import com.helger.commons.io.file.iterate.FileSystemIterator;
+import com.helger.commons.io.file.FileSystemIterator;
 import com.helger.commons.mock.CommonsTestHelper;
 
 /**
