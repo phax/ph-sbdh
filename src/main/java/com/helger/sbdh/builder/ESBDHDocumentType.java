@@ -25,7 +25,7 @@ import org.unece.cefact.namespaces.sbdh.StandardBusinessDocumentHeader;
 
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.annotation.ReturnsMutableCopy;
-import com.helger.commons.collection.CollectionHelper;
+import com.helger.commons.collection.impl.CommonsArrayList;
 import com.helger.commons.collection.impl.ICommonsList;
 import com.helger.jaxb.builder.IJAXBDocumentType;
 import com.helger.jaxb.builder.JAXBDocumentType;
@@ -45,7 +45,7 @@ public enum ESBDHDocumentType implements IJAXBDocumentType
 
   private ESBDHDocumentType (@Nonnull final Class <?> aClass, @Nonnull final String sXSDPath)
   {
-    m_aDocType = new JAXBDocumentType (aClass, CollectionHelper.newList (sXSDPath), null);
+    m_aDocType = new JAXBDocumentType (aClass, new CommonsArrayList <> (sXSDPath), null);
   }
 
   @Nonnull

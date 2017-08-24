@@ -19,16 +19,16 @@ package com.helger.sbdh;
 import org.unece.cefact.namespaces.sbdh.ObjectFactory;
 import org.unece.cefact.namespaces.sbdh.StandardBusinessDocument;
 
-import com.helger.jaxb.AbstractJAXBMarshaller;
+import com.helger.jaxb.GenericJAXBMarshaller;
 import com.helger.xml.namespace.MapBasedNamespaceContext;
 
 /**
  * This is the reader and writer for SBD 1.3 documents. This class may be
- * derived to override protected methods from {@link AbstractJAXBMarshaller}.
+ * derived to override protected methods from {@link GenericJAXBMarshaller}.
  *
  * @author Philip Helger
  */
-public class SBDMarshaller extends AbstractJAXBMarshaller <StandardBusinessDocument>
+public class SBDMarshaller extends GenericJAXBMarshaller <StandardBusinessDocument>
 {
   public SBDMarshaller ()
   {
