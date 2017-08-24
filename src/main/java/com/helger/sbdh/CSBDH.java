@@ -25,7 +25,6 @@ import com.helger.commons.annotation.CodingStyleguideUnaware;
 import com.helger.commons.annotation.PresentForCodeCoverage;
 import com.helger.commons.collection.impl.CommonsArrayList;
 import com.helger.commons.io.resource.ClassPathResource;
-import com.helger.commons.io.resource.IReadableResource;
 
 /**
  * Contains all the constants for SBDH handling.
@@ -51,8 +50,8 @@ public final class CSBDH
    * schemas must not be specified.
    */
   @CodingStyleguideUnaware
-  public static final List <? extends IReadableResource> SBDH_XSDS = new CommonsArrayList <> (new ClassPathResource (SBDH_XSD_PATH,
-                                                                                                                     _getCL ())).getAsUnmodifiable ();
+  public static final List <ClassPathResource> SBDH_XSDS = new CommonsArrayList <> (new ClassPathResource (SBDH_XSD_PATH,
+                                                                                                           _getCL ())).getAsUnmodifiable ();
 
   /** Namespace URI for SBDH 1.3 */
   public static final String SBDH_NS = "http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader";
