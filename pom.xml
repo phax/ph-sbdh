@@ -112,6 +112,7 @@
           <excludes>
             <exclude>src/main/resources/schemas/**</exclude>
             <exclude>src/test/resources/examples/**</exclude>
+            <exclude>**/*.txt</exclude>
           </excludes>
         </configuration>
       </plugin>
