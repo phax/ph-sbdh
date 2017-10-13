@@ -99,6 +99,7 @@
         <extensions>true</extensions>
         <configuration>
           <instructions>
+            <Automatic-Module-Name>com.helger.sbdh</Automatic-Module-Name>
             <Export-Package>com.helger.sbdh.*,
               org.unece.cefact.namespaces.sbdh.*</Export-Package>
             <Import-Package>!javax.annotation.*,*</Import-Package>
