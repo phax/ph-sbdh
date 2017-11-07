@@ -20,7 +20,6 @@ import org.unece.cefact.namespaces.sbdh.ObjectFactory;
 import org.unece.cefact.namespaces.sbdh.StandardBusinessDocument;
 
 import com.helger.jaxb.GenericJAXBMarshaller;
-import com.helger.xml.namespace.MapBasedNamespaceContext;
 
 /**
  * This is the reader and writer for SBD 1.3 documents. This class may be
@@ -36,8 +35,6 @@ public class SBDMarshaller extends GenericJAXBMarshaller <StandardBusinessDocume
            CSBDH.SBDH_XSDS,
            o -> new ObjectFactory ().createStandardBusinessDocument (o));
 
-    final MapBasedNamespaceContext aNSContext = new MapBasedNamespaceContext ();
-    aNSContext.addMapping ("sh", CSBDH.SBDH_NS);
-    setNamespaceContext (aNSContext);
+    setNamespaceContext (SBDHMarshaller.createDefaultNamespaceContext ());
   }
 }

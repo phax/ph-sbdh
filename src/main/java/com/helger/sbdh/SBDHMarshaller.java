@@ -16,9 +16,12 @@
  */
 package com.helger.sbdh;
 
+import javax.annotation.Nonnull;
+
 import org.unece.cefact.namespaces.sbdh.ObjectFactory;
 import org.unece.cefact.namespaces.sbdh.StandardBusinessDocumentHeader;
 
+import com.helger.commons.annotation.ReturnsMutableCopy;
 import com.helger.jaxb.GenericJAXBMarshaller;
 import com.helger.xml.namespace.MapBasedNamespaceContext;
 
@@ -30,14 +33,21 @@ import com.helger.xml.namespace.MapBasedNamespaceContext;
  */
 public class SBDHMarshaller extends GenericJAXBMarshaller <StandardBusinessDocumentHeader>
 {
+  @Nonnull
+  @ReturnsMutableCopy
+  public static MapBasedNamespaceContext createDefaultNamespaceContext ()
+  {
+    final MapBasedNamespaceContext aNSContext = new MapBasedNamespaceContext ();
+    aNSContext.addMapping ("sh", CSBDH.SBDH_NS);
+    return aNSContext;
+  }
+
   public SBDHMarshaller ()
   {
     super (StandardBusinessDocumentHeader.class,
            CSBDH.SBDH_XSDS,
            o -> new ObjectFactory ().createStandardBusinessDocumentHeader (o));
 
-    final MapBasedNamespaceContext aNSContext = new MapBasedNamespaceContext ();
-    aNSContext.addMapping ("sh", CSBDH.SBDH_NS);
-    setNamespaceContext (aNSContext);
+    setNamespaceContext (createDefaultNamespaceContext ());
   }
 }
