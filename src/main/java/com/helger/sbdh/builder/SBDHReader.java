@@ -22,21 +22,27 @@ import javax.annotation.concurrent.NotThreadSafe;
 import org.unece.cefact.namespaces.sbdh.StandardBusinessDocument;
 import org.unece.cefact.namespaces.sbdh.StandardBusinessDocumentHeader;
 
-import com.helger.commons.annotation.PresentForCodeCoverage;
+import com.helger.jaxb.builder.JAXBReaderBuilder;
 
 /**
  * Read all SBDH document types.
  *
  * @author Philip Helger
+ * @param <JAXBTYPE>
+ *        The SBDH implementation class to be read
  */
 @NotThreadSafe
-public final class SBDHReader
+public class SBDHReader <JAXBTYPE> extends JAXBReaderBuilder <JAXBTYPE, SBDHReader <JAXBTYPE>>
 {
-  @PresentForCodeCoverage
-  private static final SBDHReader s_aInstance = new SBDHReader ();
+  public SBDHReader (@Nonnull final Class <JAXBTYPE> aClass)
+  {
+    this (SBDHDocumentTypes.getDocumentTypeOfImplementationClass (aClass), aClass);
+  }
 
-  private SBDHReader ()
-  {}
+  public SBDHReader (@Nonnull final ESBDHDocumentType eDocType, @Nonnull final Class <JAXBTYPE> aImplClass)
+  {
+    super (eDocType, aImplClass);
+  }
 
   /**
    * Create a reader builder for StandardBusinessDocument.
@@ -44,9 +50,9 @@ public final class SBDHReader
    * @return The builder and never <code>null</code>
    */
   @Nonnull
-  public static SBDHReaderBuilder <StandardBusinessDocument> standardBusinessDocument ()
+  public static SBDHReader <StandardBusinessDocument> standardBusinessDocument ()
   {
-    return SBDHReaderBuilder.create (StandardBusinessDocument.class);
+    return new SBDHReader <> (StandardBusinessDocument.class);
   }
 
   /**
@@ -55,8 +61,8 @@ public final class SBDHReader
    * @return The builder and never <code>null</code>
    */
   @Nonnull
-  public static SBDHReaderBuilder <StandardBusinessDocumentHeader> standardBusinessDocumentHeader ()
+  public static SBDHReader <StandardBusinessDocumentHeader> standardBusinessDocumentHeader ()
   {
-    return SBDHReaderBuilder.create (StandardBusinessDocumentHeader.class);
+    return new SBDHReader <> (StandardBusinessDocumentHeader.class);
   }
 }

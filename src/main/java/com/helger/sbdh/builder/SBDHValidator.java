@@ -22,21 +22,27 @@ import javax.annotation.concurrent.NotThreadSafe;
 import org.unece.cefact.namespaces.sbdh.StandardBusinessDocument;
 import org.unece.cefact.namespaces.sbdh.StandardBusinessDocumentHeader;
 
-import com.helger.commons.annotation.PresentForCodeCoverage;
+import com.helger.jaxb.builder.JAXBValidationBuilder;
 
 /**
  * Validate all SBDH document types.
  *
  * @author Philip Helger
+ * @param <JAXBTYPE>
+ *        The SBDH implementation class to be validated
  */
 @NotThreadSafe
-public final class SBDHValidator
+public class SBDHValidator <JAXBTYPE> extends JAXBValidationBuilder <JAXBTYPE, SBDHValidator <JAXBTYPE>>
 {
-  @PresentForCodeCoverage
-  private static final SBDHValidator s_aInstance = new SBDHValidator ();
+  public SBDHValidator (@Nonnull final Class <JAXBTYPE> aClass)
+  {
+    this (SBDHDocumentTypes.getDocumentTypeOfImplementationClass (aClass));
+  }
 
-  private SBDHValidator ()
-  {}
+  public SBDHValidator (@Nonnull final ESBDHDocumentType eDocType)
+  {
+    super (eDocType);
+  }
 
   /**
    * Create a validation builder for StandardBusinessDocument.
@@ -44,9 +50,9 @@ public final class SBDHValidator
    * @return The builder and never <code>null</code>
    */
   @Nonnull
-  public static SBDHValidatorBuilder <StandardBusinessDocument> standardBusinessDocument ()
+  public static SBDHValidator <StandardBusinessDocument> standardBusinessDocument ()
   {
-    return SBDHValidatorBuilder.create (StandardBusinessDocument.class);
+    return new SBDHValidator <> (StandardBusinessDocument.class);
   }
 
   /**
@@ -55,8 +61,8 @@ public final class SBDHValidator
    * @return The builder and never <code>null</code>
    */
   @Nonnull
-  public static SBDHValidatorBuilder <StandardBusinessDocumentHeader> standardBusinessDocumentHeader ()
+  public static SBDHValidator <StandardBusinessDocumentHeader> standardBusinessDocumentHeader ()
   {
-    return SBDHValidatorBuilder.create (StandardBusinessDocumentHeader.class);
+    return new SBDHValidator <> (StandardBusinessDocumentHeader.class);
   }
 }

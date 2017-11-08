@@ -16,6 +16,8 @@
  */
 package com.helger.sbdh;
 
+import javax.annotation.concurrent.NotThreadSafe;
+
 import org.unece.cefact.namespaces.sbdh.ObjectFactory;
 import org.unece.cefact.namespaces.sbdh.StandardBusinessDocument;
 
@@ -27,6 +29,7 @@ import com.helger.jaxb.GenericJAXBMarshaller;
  *
  * @author Philip Helger
  */
+@NotThreadSafe
 public class SBDMarshaller extends GenericJAXBMarshaller <StandardBusinessDocument>
 {
   public SBDMarshaller ()

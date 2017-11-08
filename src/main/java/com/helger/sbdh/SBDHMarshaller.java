@@ -17,6 +17,7 @@
 package com.helger.sbdh;
 
 import javax.annotation.Nonnull;
+import javax.annotation.concurrent.NotThreadSafe;
 
 import org.unece.cefact.namespaces.sbdh.ObjectFactory;
 import org.unece.cefact.namespaces.sbdh.StandardBusinessDocumentHeader;
@@ -31,6 +32,7 @@ import com.helger.xml.namespace.MapBasedNamespaceContext;
  *
  * @author Philip Helger
  */
+@NotThreadSafe
 public class SBDHMarshaller extends GenericJAXBMarshaller <StandardBusinessDocumentHeader>
 {
   @Nonnull

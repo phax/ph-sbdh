@@ -22,21 +22,30 @@ import javax.annotation.concurrent.NotThreadSafe;
 import org.unece.cefact.namespaces.sbdh.StandardBusinessDocument;
 import org.unece.cefact.namespaces.sbdh.StandardBusinessDocumentHeader;
 
-import com.helger.commons.annotation.PresentForCodeCoverage;
+import com.helger.jaxb.builder.JAXBWriterBuilder;
+import com.helger.sbdh.SBDHMarshaller;
 
 /**
  * Write all SBDH document types.
  *
  * @author Philip Helger
+ * @param <JAXBTYPE>
+ *        The SBDH implementation class to be written
  */
 @NotThreadSafe
-public final class SBDHWriter
+public class SBDHWriter <JAXBTYPE> extends JAXBWriterBuilder <JAXBTYPE, SBDHWriter <JAXBTYPE>>
 {
-  @PresentForCodeCoverage
-  private static final SBDHWriter s_aInstance = new SBDHWriter ();
+  public SBDHWriter (@Nonnull final Class <JAXBTYPE> aClass)
+  {
+    this (SBDHDocumentTypes.getDocumentTypeOfImplementationClass (aClass));
+  }
 
-  private SBDHWriter ()
-  {}
+  public SBDHWriter (@Nonnull final ESBDHDocumentType eDocType)
+  {
+    super (eDocType);
+
+    setNamespaceContext (SBDHMarshaller.createDefaultNamespaceContext ());
+  }
 
   /**
    * Create a writer builder for StandardBusinessDocument.
@@ -44,9 +53,9 @@ public final class SBDHWriter
    * @return The builder and never <code>null</code>
    */
   @Nonnull
-  public static SBDHWriterBuilder <StandardBusinessDocument> standardBusinessDocument ()
+  public static SBDHWriter <StandardBusinessDocument> standardBusinessDocument ()
   {
-    return SBDHWriterBuilder.create (StandardBusinessDocument.class);
+    return new SBDHWriter <> (StandardBusinessDocument.class);
   }
 
   /**
@@ -55,8 +64,8 @@ public final class SBDHWriter
    * @return The builder and never <code>null</code>
    */
   @Nonnull
-  public static SBDHWriterBuilder <StandardBusinessDocumentHeader> standardBusinessDocumentHeader ()
+  public static SBDHWriter <StandardBusinessDocumentHeader> standardBusinessDocumentHeader ()
   {
-    return SBDHWriterBuilder.create (StandardBusinessDocumentHeader.class);
+    return new SBDHWriter <> (StandardBusinessDocumentHeader.class);
   }
 }

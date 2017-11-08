@@ -45,6 +45,7 @@ public final class CSBDH
    * schemas must not be specified.
    */
   public static final String SBDH_XSD_PATH = "/schemas/sbdh/StandardBusinessDocumentHeader.xsd";
+
   /**
    * XML Schema resources for SBDH 1.3 - since include is used, the other
    * schemas must not be specified.
