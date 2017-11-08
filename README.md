@@ -6,8 +6,9 @@ It supports easily reading and writing of SBD and SBDH between Java domain objec
 It is licensed under Apache 2.0 license.
 
 # News and noteworthy
-  * v4.0.0 - work in progress
+  * v4.0.0 - 2017-11-08
     * Updated to ph-commons 9.0.0
+    * Added default namespace prefix "sh" also when using the Writer API
   * v3.0.2 - 2017-01-09
     * Binds to ph-commons 8.6.0
   * v3.0.1 - 2016-12-31
@@ -23,7 +24,7 @@ Add the following to your pom.xml to use this artifact:
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-sbdh</artifactId>
-  <version>3.0.2</version>
+  <version>4.0.0</version>
 </dependency>
 ```
 
