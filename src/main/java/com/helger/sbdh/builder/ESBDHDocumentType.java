@@ -16,8 +16,9 @@
  */
 package com.helger.sbdh.builder;
 
+import java.util.List;
+
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import javax.xml.validation.Schema;
 
 import org.unece.cefact.namespaces.sbdh.StandardBusinessDocument;
@@ -25,8 +26,8 @@ import org.unece.cefact.namespaces.sbdh.StandardBusinessDocumentHeader;
 
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.annotation.ReturnsMutableCopy;
-import com.helger.commons.collection.impl.CommonsArrayList;
 import com.helger.commons.collection.impl.ICommonsList;
+import com.helger.commons.io.resource.ClassPathResource;
 import com.helger.jaxb.builder.IJAXBDocumentType;
 import com.helger.jaxb.builder.JAXBDocumentType;
 import com.helger.sbdh.CSBDH;
@@ -38,14 +39,15 @@ import com.helger.sbdh.CSBDH;
  */
 public enum ESBDHDocumentType implements IJAXBDocumentType
 {
-  SBD (StandardBusinessDocument.class, CSBDH.SBDH_XSD_PATH),
-  SBDH (StandardBusinessDocumentHeader.class, CSBDH.SBDH_XSD_PATH);
+  SBD (StandardBusinessDocument.class, CSBDH.SBDH_XSDS),
+  SBDH (StandardBusinessDocumentHeader.class, CSBDH.SBDH_XSDS);
 
   private final JAXBDocumentType m_aDocType;
 
-  private ESBDHDocumentType (@Nonnull final Class <?> aClass, @Nonnull final String sXSDPath)
+  private ESBDHDocumentType (@Nonnull final Class <?> aClass,
+                             @Nonnull @Nonempty final List <? extends ClassPathResource> aXSDs)
   {
-    m_aDocType = new JAXBDocumentType (aClass, new CommonsArrayList <> (sXSDPath), null);
+    m_aDocType = new JAXBDocumentType (aClass, aXSDs, null);
   }
 
   @Nonnull
@@ -57,9 +59,9 @@ public enum ESBDHDocumentType implements IJAXBDocumentType
   @Nonnull
   @Nonempty
   @ReturnsMutableCopy
-  public ICommonsList <String> getAllXSDPaths ()
+  public ICommonsList <ClassPathResource> getAllXSDResources ()
   {
-    return m_aDocType.getAllXSDPaths ();
+    return m_aDocType.getAllXSDResources ();
   }
 
   @Nonnull
@@ -76,8 +78,8 @@ public enum ESBDHDocumentType implements IJAXBDocumentType
   }
 
   @Nonnull
-  public Schema getSchema (@Nullable final ClassLoader aClassLoader)
+  public Schema getSchema ()
   {
-    return m_aDocType.getSchema (aClassLoader);
+    return m_aDocType.getSchema ();
   }
 }

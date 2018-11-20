@@ -8,7 +8,7 @@ It is licensed under Apache 2.0 license.
 # News and noteworthy
 
 * v4.0.1 - work in progress
-    * Requires at least ph-commons 9.1.8
+    * Requires at least ph-commons 9.2.0
 * v4.0.0 - 2017-11-08
     * Updated to ph-commons 9.0.0
     * Added default namespace prefix "sh" also when using the Writer API
@@ -24,6 +24,7 @@ It is licensed under Apache 2.0 license.
 # Maven usage
 
 Add the following to your pom.xml to use this artifact:
+
 ```xml
 <dependency>
   <groupId>com.helger</groupId>
