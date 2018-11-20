@@ -7,7 +7,7 @@ It is licensed under Apache 2.0 license.
 
 # News and noteworthy
 
-* v4.0.1 - work in progress
+* v4.1.0 - work in progress
     * Requires at least ph-commons 9.2.0
 * v4.0.0 - 2017-11-08
     * Updated to ph-commons 9.0.0
