@@ -7,8 +7,8 @@ It is licensed under Apache 2.0 license.
 
 # News and noteworthy
 
-* v4.1.0 - work in progress
-    * Requires at least ph-commons 9.2.0
+* v4.1.0 - 2018-11-22
+    * Updated to ph-commons 9.2.0
 * v4.0.0 - 2017-11-08
     * Updated to ph-commons 9.0.0
     * Added default namespace prefix "sh" also when using the Writer API
@@ -29,7 +29,7 @@ Add the following to your pom.xml to use this artifact:
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-sbdh</artifactId>
-  <version>4.0.0</version>
+  <version>4.1.0</version>
 </dependency>
 ```
 
