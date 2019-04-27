@@ -33,6 +33,11 @@ Add the following to your pom.xml to use this artifact:
 </dependency>
 ```
 
+# Gradle considerations
+
+This project relies on JDK version based Maven profile activation.
+See https://github.com/phax/ph-jaxb-pom#gradle-usage for help on this specific issue. 
+
 ---
 
 My personal [Coding Styleguide](https://github.com/phax/meta/blob/master/CodingStyleguide.md) |
