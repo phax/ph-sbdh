@@ -34,8 +34,8 @@ public final class SBDMarshallerTest
   @Test
   public void testReadAll ()
   {
-    for (final File aFile : new FileSystemIterator ("src/test/resources/examples/sbdh"))
+    for (final File aFile : new FileSystemIterator ("src/test/resources/examples/sbd"))
       if (aFile.isFile ())
-        assertNotNull (aFile.getAbsolutePath (), new SBDHMarshaller ().read (aFile));
+        assertNotNull (aFile.getAbsolutePath (), new SBDMarshaller ().read (aFile));
   }
 }
