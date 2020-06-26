@@ -39,13 +39,14 @@ import com.helger.sbdh.CSBDH;
  */
 public enum ESBDHDocumentType implements IJAXBDocumentType
 {
+  /** Standard Business Document - header + payload */
   SBD (StandardBusinessDocument.class, CSBDH.SBDH_XSDS),
+  /** Standard Business Document Header - header only */
   SBDH (StandardBusinessDocumentHeader.class, CSBDH.SBDH_XSDS);
 
   private final JAXBDocumentType m_aDocType;
 
-  private ESBDHDocumentType (@Nonnull final Class <?> aClass,
-                             @Nonnull @Nonempty final List <? extends ClassPathResource> aXSDs)
+  ESBDHDocumentType (@Nonnull final Class <?> aClass, @Nonnull @Nonempty final List <? extends ClassPathResource> aXSDs)
   {
     m_aDocType = new JAXBDocumentType (aClass, aXSDs, null);
   }
