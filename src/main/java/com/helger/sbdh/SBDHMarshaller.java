@@ -53,7 +53,7 @@ public class SBDHMarshaller extends GenericJAXBMarshaller <StandardBusinessDocum
   {
     super (StandardBusinessDocumentHeader.class,
            bValidationEnabled ? CSBDH.SBDH_XSDS : null,
-           o -> new ObjectFactory ().createStandardBusinessDocumentHeader (o));
+           new ObjectFactory ()::createStandardBusinessDocumentHeader);
 
     setNamespaceContext (createDefaultNamespaceContext ());
   }
