@@ -7,7 +7,8 @@ It is licensed under Apache 2.0 license.
 
 # News and noteworthy
 
-* v4.1.1 - work in progress
+* v4.1.1 - 2020-09-17
+    * Updated to Jakarta JAXB 2.3.3
     * Added possibility to disable XSD validation in `SBD(H)Marshaller`
 * v4.1.0 - 2018-11-22
     * Updated to ph-commons 9.2.0
