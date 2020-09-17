@@ -10,6 +10,7 @@ It is licensed under Apache 2.0 license.
 * v4.1.1 - 2020-09-17
     * Updated to Jakarta JAXB 2.3.3
     * Added possibility to disable XSD validation in `SBD(H)Marshaller`
+    * Using Java 8 date and time classes for JAXB created classes
 * v4.1.0 - 2018-11-22
     * Updated to ph-commons 9.2.0
 * v4.0.0 - 2017-11-08
