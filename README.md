@@ -5,8 +5,23 @@ It supports easily reading and writing of SBD and SBDH between Java domain objec
 
 It is licensed under Apache 2.0 license.
 
+
+# Maven usage
+
+Add the following to your pom.xml to use this artifact, replacing x.y.z with the effective version:
+
+```xml
+<dependency>
+  <groupId>com.helger</groupId>
+  <artifactId>ph-sbdh</artifactId>
+  <version>x.y.z</version>
+</dependency>
+```
+
 # News and noteworthy
 
+* v4.1.2 - work in progress
+    * Updated to ph-commons 10
 * v4.1.1 - 2020-09-17
     * Updated to Jakarta JAXB 2.3.3
     * Added possibility to disable XSD validation in `SBD(H)Marshaller`
@@ -24,23 +39,6 @@ It is licensed under Apache 2.0 license.
     * Requires Java 8
 * v2.0.1 - 2015-07-21
     * Last Java 1.6 version  
-
-# Maven usage
-
-Add the following to your pom.xml to use this artifact:
-
-```xml
-<dependency>
-  <groupId>com.helger</groupId>
-  <artifactId>ph-sbdh</artifactId>
-  <version>4.1.0</version>
-</dependency>
-```
-
-# Gradle considerations
-
-This project relies on JDK version based Maven profile activation.
-See https://github.com/phax/ph-jaxb-pom#gradle-usage for help on this specific issue. 
 
 ---
 
