@@ -25,7 +25,7 @@
     <version>1.11.3</version>
   </parent>
   <artifactId>ph-sbdh</artifactId>
-  <version>4.2.0</version>
+  <version>4.2.1-SNAPSHOT</version>
   <packaging>bundle</packaging>
   <name>ph-sbdh</name>
   <description>Library for reading and writing CEFACT Standard Business Document (SBD) and Standard Business Document Header (SBDH) documents</description>
@@ -44,7 +44,7 @@
     <connection>scm:git:git@github.com:phax/ph-sbdh.git</connection>
     <developerConnection>scm:git:git@github.com:phax/ph-sbdh.git</developerConnection>
     <url>http://github.com/phax/ph-sbdh</url>
-    <tag>ph-sbdh-4.2.0</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <organization>
