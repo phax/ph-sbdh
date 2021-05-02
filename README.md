@@ -20,6 +20,8 @@ Add the following to your pom.xml to use this artifact, replacing x.y.z with the
 
 # News and noteworthy
 
+* v4.3.0 - 2021-05-02
+    * Updated to ph-commons 10.1
 * v4.2.0 - 2021-03-21
     * Updated to ph-commons 10
 * v4.1.1 - 2020-09-17
