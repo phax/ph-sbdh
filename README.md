@@ -3,6 +3,8 @@
 CEFACT Standard Business Document (SBD) and Standard Business Document Header (SBDH) wrapper library.
 It supports easily reading and writing of SBD and SBDH between Java domain objects and XML representations.
 
+Official GS1 page on SBDH is https://www.gs1.org/standards/edi/standard-business-document-header-sbdh
+
 It is licensed under Apache 2.0 license.
 
 
