@@ -7,7 +7,6 @@ Official GS1 page on SBDH is https://www.gs1.org/standards/edi/standard-business
 
 It is licensed under Apache 2.0 license.
 
-
 # Maven usage
 
 Add the following to your pom.xml to use this artifact, replacing x.y.z with the effective version:
