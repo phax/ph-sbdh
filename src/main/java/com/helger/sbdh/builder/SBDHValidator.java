@@ -32,6 +32,7 @@ import com.helger.jaxb.builder.JAXBValidationBuilder;
  *        The SBDH implementation class to be validated
  */
 @NotThreadSafe
+@Deprecated (forRemoval = true, since = "5.0.1")
 public class SBDHValidator <JAXBTYPE> extends JAXBValidationBuilder <JAXBTYPE, SBDHValidator <JAXBTYPE>>
 {
   public SBDHValidator (@Nonnull final Class <JAXBTYPE> aClass)

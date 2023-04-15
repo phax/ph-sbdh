@@ -32,6 +32,7 @@ import com.helger.commons.mock.CommonsTestHelper;
  *
  * @author Philip Helger
  */
+@Deprecated (forRemoval = true, since = "5.0.1")
 public final class SBDHReaderTest
 {
   @Test

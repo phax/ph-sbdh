@@ -32,6 +32,7 @@ import com.helger.commons.io.file.FileSystemIterator;
  *
  * @author Philip Helger
  */
+@Deprecated (forRemoval = true, since = "5.0.1")
 public final class SBDHValidatorTest
 {
   @Test

@@ -28,7 +28,7 @@
     <xjc:javaType name="com.helger.commons.datetime.XMLOffsetDate"     xmlType="xsd:date"     adapter="com.helger.jaxb.adapter.AdapterXMLOffsetDate" />
     <xjc:javaType name="com.helger.commons.datetime.XMLOffsetTime"     xmlType="xsd:time"     adapter="com.helger.jaxb.adapter.AdapterXMLOffsetTime" />
   </globalBindings>
-  <bindings schemaLocation="../resources/schemas/sbdh/StandardBusinessDocumentHeader.xsd">
+  <bindings schemaLocation="../resources/external/schemas/sbdh/StandardBusinessDocumentHeader.xsd">
     <schemaBindings>
       <package name="org.unece.cefact.namespaces.sbdh" />
     </schemaBindings>

@@ -44,7 +44,7 @@ public final class CSBDH
    * XML Schema resources for SBDH 1.3 - since include is used, the other
    * schemas must not be specified.
    */
-  public static final String SBDH_XSD_PATH = "/schemas/sbdh/StandardBusinessDocumentHeader.xsd";
+  public static final String SBDH_XSD_PATH = "/external/schemas/sbdh/StandardBusinessDocumentHeader.xsd";
 
   /**
    * XML Schema resources for SBDH 1.3 - since include is used, the other
@@ -58,7 +58,7 @@ public final class CSBDH
   public static final String SBDH_NS = "http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader";
 
   @PresentForCodeCoverage
-  private static final CSBDH s_aInstance = new CSBDH ();
+  private static final CSBDH INSTANCE = new CSBDH ();
 
   private CSBDH ()
   {}

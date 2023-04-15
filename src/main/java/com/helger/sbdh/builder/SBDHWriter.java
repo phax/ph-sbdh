@@ -33,6 +33,7 @@ import com.helger.sbdh.SBDHMarshaller;
  *        The SBDH implementation class to be written
  */
 @NotThreadSafe
+@Deprecated (forRemoval = true, since = "5.0.1")
 public class SBDHWriter <JAXBTYPE> extends JAXBWriterBuilder <JAXBTYPE, SBDHWriter <JAXBTYPE>>
 {
   public SBDHWriter (@Nonnull final Class <JAXBTYPE> aClass)

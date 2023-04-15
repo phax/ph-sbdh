@@ -35,10 +35,11 @@ import com.helger.commons.collection.impl.ICommonsSet;
  * @author Philip Helger
  */
 @Immutable
+@Deprecated (forRemoval = true, since = "5.0.1")
 public final class SBDHDocumentTypes
 {
   /** Maps local names to document types */
-  private static final ICommonsMap <String, ESBDHDocumentType> s_aLocalName2DocType = new CommonsHashMap <> ();
+  private static final ICommonsMap <String, ESBDHDocumentType> LOCALNAME2DOCTYPE = new CommonsHashMap <> ();
 
   static
   {
@@ -47,9 +48,9 @@ public final class SBDHDocumentTypes
     {
       // add to local name map
       final String sLocalName = eDocType.getLocalName ();
-      if (s_aLocalName2DocType.containsKey (sLocalName))
+      if (LOCALNAME2DOCTYPE.containsKey (sLocalName))
         throw new IllegalArgumentException ("The local name '" + sLocalName + "' is already mapped!");
-      s_aLocalName2DocType.put (sLocalName, eDocType);
+      LOCALNAME2DOCTYPE.put (sLocalName, eDocType);
     }
   }
 
@@ -67,7 +68,7 @@ public final class SBDHDocumentTypes
   @ReturnsMutableCopy
   public static ICommonsSet <String> getAllLocalNames ()
   {
-    return s_aLocalName2DocType.copyOfKeySet ();
+    return LOCALNAME2DOCTYPE.copyOfKeySet ();
   }
 
   /**
@@ -82,7 +83,7 @@ public final class SBDHDocumentTypes
   @Nullable
   public static ESBDHDocumentType getDocumentTypeOfLocalName (@Nullable final String sLocalName)
   {
-    return s_aLocalName2DocType.get (sLocalName);
+    return LOCALNAME2DOCTYPE.get (sLocalName);
   }
 
   /**

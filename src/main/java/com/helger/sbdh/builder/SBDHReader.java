@@ -32,6 +32,7 @@ import com.helger.jaxb.builder.JAXBReaderBuilder;
  *        The SBDH implementation class to be read
  */
 @NotThreadSafe
+@Deprecated (forRemoval = true, since = "5.0.1")
 public class SBDHReader <JAXBTYPE> extends JAXBReaderBuilder <JAXBTYPE, SBDHReader <JAXBTYPE>>
 {
   public SBDHReader (@Nonnull final Class <JAXBTYPE> aClass)

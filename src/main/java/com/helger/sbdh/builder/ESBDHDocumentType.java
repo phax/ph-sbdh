@@ -37,6 +37,7 @@ import com.helger.sbdh.CSBDH;
  *
  * @author Philip Helger
  */
+@Deprecated (forRemoval = true, since = "5.0.1")
 public enum ESBDHDocumentType implements IJAXBDocumentType
 {
   /** Standard Business Document - header + payload */
