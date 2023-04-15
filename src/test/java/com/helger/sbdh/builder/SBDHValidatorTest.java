@@ -38,7 +38,7 @@ public final class SBDHValidatorTest
   @Test
   public void testSBD ()
   {
-    for (final File aFile : new FileSystemIterator ("src/test/resources/examples/sbd"))
+    for (final File aFile : new FileSystemIterator ("src/test/resources/external/examples/sbd"))
       if (aFile.isFile ())
       {
         final StandardBusinessDocument aDoc = SBDHReader.standardBusinessDocument ().read (aFile);
@@ -50,7 +50,7 @@ public final class SBDHValidatorTest
   @Test
   public void testSBDH ()
   {
-    for (final File aFile : new FileSystemIterator ("src/test/resources/examples/sbdh"))
+    for (final File aFile : new FileSystemIterator ("src/test/resources/external/examples/sbdh"))
       if (aFile.isFile ())
       {
         final StandardBusinessDocumentHeader aDoc = SBDHReader.standardBusinessDocumentHeader ().read (aFile);

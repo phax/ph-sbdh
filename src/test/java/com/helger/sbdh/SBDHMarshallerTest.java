@@ -21,6 +21,8 @@ import static org.junit.Assert.assertNotNull;
 import java.io.File;
 
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.helger.commons.io.file.FileSystemIterator;
 
@@ -31,11 +33,16 @@ import com.helger.commons.io.file.FileSystemIterator;
  */
 public final class SBDHMarshallerTest
 {
+  private static final Logger LOGGER = LoggerFactory.getLogger (SBDHMarshallerTest.class);
+
   @Test
   public void testReadAll ()
   {
-    for (final File aFile : new FileSystemIterator ("src/test/resources/examples/sbd"))
+    for (final File aFile : new FileSystemIterator ("src/test/resources/external/examples/sbd"))
       if (aFile.isFile ())
+      {
+        LOGGER.info ("Reading " + aFile.getName ());
         assertNotNull (aFile.getAbsolutePath (), new SBDMarshaller ().read (aFile));
+      }
   }
 }
