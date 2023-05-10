@@ -23,6 +23,8 @@ import org.unece.cefact.namespaces.sbdh.StandardBusinessDocument;
 import org.unece.cefact.namespaces.sbdh.StandardBusinessDocumentHeader;
 
 import com.helger.jaxb.builder.JAXBReaderBuilder;
+import com.helger.sbdh.SBDHMarshaller;
+import com.helger.sbdh.SBDMarshaller;
 
 /**
  * Read all SBDH document types.
@@ -49,7 +51,9 @@ public class SBDHReader <JAXBTYPE> extends JAXBReaderBuilder <JAXBTYPE, SBDHRead
    * Create a reader builder for StandardBusinessDocument.
    *
    * @return The builder and never <code>null</code>
+   * @deprecated Use {@link SBDMarshaller} instead
    */
+  @Deprecated
   @Nonnull
   public static SBDHReader <StandardBusinessDocument> standardBusinessDocument ()
   {
@@ -60,7 +64,9 @@ public class SBDHReader <JAXBTYPE> extends JAXBReaderBuilder <JAXBTYPE, SBDHRead
    * Create a reader builder for StandardBusinessDocumentHeader.
    *
    * @return The builder and never <code>null</code>
+   * @deprecated Use {@link SBDHMarshaller} instead
    */
+  @Deprecated
   @Nonnull
   public static SBDHReader <StandardBusinessDocumentHeader> standardBusinessDocumentHeader ()
   {

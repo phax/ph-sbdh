@@ -23,6 +23,8 @@ import org.unece.cefact.namespaces.sbdh.StandardBusinessDocument;
 import org.unece.cefact.namespaces.sbdh.StandardBusinessDocumentHeader;
 
 import com.helger.jaxb.builder.JAXBValidationBuilder;
+import com.helger.sbdh.SBDHMarshaller;
+import com.helger.sbdh.SBDMarshaller;
 
 /**
  * Validate all SBDH document types.
@@ -49,7 +51,9 @@ public class SBDHValidator <JAXBTYPE> extends JAXBValidationBuilder <JAXBTYPE, S
    * Create a validation builder for StandardBusinessDocument.
    *
    * @return The builder and never <code>null</code>
+   * @deprecated Use {@link SBDMarshaller} instead
    */
+  @Deprecated
   @Nonnull
   public static SBDHValidator <StandardBusinessDocument> standardBusinessDocument ()
   {
@@ -60,7 +64,9 @@ public class SBDHValidator <JAXBTYPE> extends JAXBValidationBuilder <JAXBTYPE, S
    * Create a validation builder for StandardBusinessDocumentHeader.
    *
    * @return The builder and never <code>null</code>
+   * @deprecated Use {@link SBDHMarshaller} instead
    */
+  @Deprecated
   @Nonnull
   public static SBDHValidator <StandardBusinessDocumentHeader> standardBusinessDocumentHeader ()
   {

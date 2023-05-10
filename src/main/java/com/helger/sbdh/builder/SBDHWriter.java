@@ -24,6 +24,7 @@ import org.unece.cefact.namespaces.sbdh.StandardBusinessDocumentHeader;
 
 import com.helger.jaxb.builder.JAXBWriterBuilder;
 import com.helger.sbdh.SBDHMarshaller;
+import com.helger.sbdh.SBDMarshaller;
 
 /**
  * Write all SBDH document types.
@@ -52,7 +53,9 @@ public class SBDHWriter <JAXBTYPE> extends JAXBWriterBuilder <JAXBTYPE, SBDHWrit
    * Create a writer builder for StandardBusinessDocument.
    *
    * @return The builder and never <code>null</code>
+   * @deprecated Use {@link SBDMarshaller} instead
    */
+  @Deprecated
   @Nonnull
   public static SBDHWriter <StandardBusinessDocument> standardBusinessDocument ()
   {
@@ -63,7 +66,9 @@ public class SBDHWriter <JAXBTYPE> extends JAXBWriterBuilder <JAXBTYPE, SBDHWrit
    * Create a writer builder for StandardBusinessDocumentHeader.
    *
    * @return The builder and never <code>null</code>
+   * @deprecated Use {@link SBDHMarshaller} instead
    */
+  @Deprecated
   @Nonnull
   public static SBDHWriter <StandardBusinessDocumentHeader> standardBusinessDocumentHeader ()
   {
