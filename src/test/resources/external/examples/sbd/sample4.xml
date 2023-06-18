@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardBusinessDocument
+    xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
+  <StandardBusinessDocumentHeader>
+    <HeaderVersion>1.0</HeaderVersion>
+    <Sender>
+      <Identifier Authority="iso6523-actorid-upis">9915:yerlibilgin</Identifier>
+    </Sender>
+    <Receiver>
+      <Identifier Authority="iso6523-actorid-upis">9999:yersizbilgin</Identifier>
+    </Receiver>
+    <DocumentIdentification>
+      <Standard>urn:fdc:peppol:transaction-statistics-report:1.0</Standard>
+      <TypeVersion>1.0</TypeVersion>
+      <InstanceIdentifier>7a2f98a5-c4cf-4d78-9504-a96cdad06348</InstanceIdentifier>
+      <Type>TransactionStatisticsReport</Type>
+      <CreationDateAndTime>2020-08-26T15:07:25.296+02:00</CreationDateAndTime>
+    </DocumentIdentification>
+    <BusinessScope>
+      <Scope>
+        <Type>DOCUMENTID</Type>
+        <InstanceIdentifier>urn:fdc:peppol:transaction-statistics-report:1.0::TransactionStatisticsReport##urn:fdc:peppol.eu:edec:trns:transaction-statistics-reporting:1.0::1.0</InstanceIdentifier>
+      </Scope>
+      <Scope>
+        <Type>PROCESSID</Type>
+        <InstanceIdentifier>urn:fdc:peppol.eu:edec:bis:reporting:1.0</InstanceIdentifier>
+      </Scope>
+    </BusinessScope>
+  </StandardBusinessDocumentHeader>
+
+  <TransactionStatisticsReport
+      xmlns="urn:fdc:peppol:transaction-statistics-report:1.0">
+    <CustomizationID>urn:fdc:peppol.eu:edec:trns:transaction-statistics-reporting:1.0</CustomizationID>
+    <ProfileID>urn:fdc:peppol.eu:edec:bis:reporting:1.0</ProfileID>
+    <Header>
+      <ReportPeriod>
+        <StartDate>2022-01-01</StartDate>
+        <EndDate>2022-01-31</EndDate>
+      </ReportPeriod>
+      <ReporterID schemeID="CertSubjectCN">POP000360</ReporterID>
+    </Header>
+    <!-- Totals -->
+    <Total>
+      <Incoming>19</Incoming>
+      <Outgoing>17</Outgoing>
+    </Total>
+    <!-- Sum per TP must match TotalCount -->
+    <Subtotal type="PerTP">
+      <Key metaSchemeID="TP" schemeID="Peppol">peppol-transport-as4-v2_0</Key>
+      <Incoming>19</Incoming>
+      <Outgoing>17</Outgoing>
+    </Subtotal>
+    <!-- region PerSP-DT-PR -->
+    <!-- Subtotals must match Total -->
+    <Subtotal type="PerSP-DT-PR">
+      <Key metaSchemeID="SP" schemeID="CertSubjectCN">POP000001</Key>
+      <Key metaSchemeID="DT" schemeID="busdox-docid-qns">urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1</Key>
+      <Key metaSchemeID="PR" schemeID="cenbii-procid-ubl">urn:fdc:peppol.eu:2017:poacc:billing:01:1.0</Key>
+      <Incoming>5</Incoming>
+      <Outgoing>3</Outgoing>
+    </Subtotal>
+    <Subtotal type="PerSP-DT-PR">
+      <Key metaSchemeID="SP" schemeID="CertSubjectCN">POP000001</Key>
+      <Key metaSchemeID="DT" schemeID="busdox-docid-qns">urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1</Key>
+      <Key metaSchemeID="PR" schemeID="cenbii-procid-ubl">urn:fdc:peppol.eu:2017:poacc:billing:01:1.0</Key>
+      <Incoming>2</Incoming>
+      <Outgoing>2</Outgoing>
+    </Subtotal>
+    <!-- Sent 12 orders -->
+    <Subtotal type="PerSP-DT-PR">
+      <Key metaSchemeID="SP" schemeID="CertSubjectCN">POP000002</Key>
+      <Key metaSchemeID="DT" schemeID="busdox-docid-qns">urn:oasis:names:specification:ubl:schema:xsd:Order-2::Order##urn:fdc:peppol.eu:poacc:trns:order:3::2.1</Key>
+      <Key metaSchemeID="PR" schemeID="cenbii-procid-ubl">cenbii-procid-ubl::urn:fdc:peppol.eu:poacc:bis:ordering:3</Key>
+      <Incoming>0</Incoming>
+      <Outgoing>12</Outgoing>
+    </Subtotal>
+    <!-- Sent 12 order responses -->
+    <Subtotal type="PerSP-DT-PR">
+      <Key metaSchemeID="SP" schemeID="CertSubjectCN">POP000002</Key>
+      <Key metaSchemeID="DT" schemeID="busdox-docid-qns">urn:oasis:names:specification:ubl:schema:xsd:OrderResponse-2::OrderResponse##urn:fdc:peppol.eu:poacc:trns:order_response:3::2.1</Key>
+      <Key metaSchemeID="PR" schemeID="cenbii-procid-ubl">cenbii-procid-ubl::urn:fdc:peppol.eu:poacc:bis:ordering:3</Key>
+      <Incoming>12</Incoming>
+      <Outgoing>0</Outgoing>
+    </Subtotal>
+    <!-- endregion -->
+    <!-- region PerSP-DT-PR-CC -->
+    <!-- Subtotals must match Total -->
+    <Subtotal type="PerSP-DT-PR-CC">
+      <Key metaSchemeID="SP" schemeID="CertSubjectCN">POP000001</Key>
+      <Key metaSchemeID="DT" schemeID="busdox-docid-qns">urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1</Key>
+      <Key metaSchemeID="PR" schemeID="cenbii-procid-ubl">urn:fdc:peppol.eu:2017:poacc:billing:01:1.0</Key>
+      <Key metaSchemeID="CC" schemeID="SenderCountry">AT</Key>
+      <Key metaSchemeID="CC" schemeID="ReceiverCountry">DE</Key>
+      <Incoming>4</Incoming>
+      <Outgoing>0</Outgoing>
+    </Subtotal>
+    <Subtotal type="PerSP-DT-PR-CC">
+      <Key metaSchemeID="SP" schemeID="CertSubjectCN">POP000001</Key>
+      <Key metaSchemeID="DT" schemeID="busdox-docid-qns">urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1</Key>
+      <Key metaSchemeID="PR" schemeID="cenbii-procid-ubl">urn:fdc:peppol.eu:2017:poacc:billing:01:1.0</Key>
+      <Key metaSchemeID="CC" schemeID="SenderCountry">DE</Key>
+      <Key metaSchemeID="CC" schemeID="ReceiverCountry">DE</Key>
+      <Incoming>1</Incoming>
+      <Outgoing>0</Outgoing>
+    </Subtotal>
+    <Subtotal type="PerSP-DT-PR-CC">
+      <Key metaSchemeID="SP" schemeID="CertSubjectCN">POP000001</Key>
+      <Key metaSchemeID="DT" schemeID="busdox-docid-qns">urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2::CreditNote##urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0::2.1</Key>
+      <Key metaSchemeID="PR" schemeID="cenbii-procid-ubl">urn:fdc:peppol.eu:2017:poacc:billing:01:1.0</Key>
+      <Key metaSchemeID="CC" schemeID="SenderCountry">BE</Key>
+      <Key metaSchemeID="CC" schemeID="ReceiverCountry">DE</Key>
+      <Incoming>2</Incoming>
+      <Outgoing>0</Outgoing>
+    </Subtotal>
+    <Subtotal type="PerSP-DT-PR-CC">
+      <Key metaSchemeID="SP" schemeID="CertSubjectCN">POP000002</Key>
+      <Key metaSchemeID="DT" schemeID="busdox-docid-qns">urn:oasis:names:specification:ubl:schema:xsd:Order-2::Order##urn:fdc:peppol.eu:poacc:trns:order:3::2.1</Key>
+      <Key metaSchemeID="PR" schemeID="cenbii-procid-ubl">cenbii-procid-ubl::urn:fdc:peppol.eu:poacc:bis:ordering:3</Key>
+      <Key metaSchemeID="CC" schemeID="SenderCountry">AT</Key>
+      <Key metaSchemeID="CC" schemeID="ReceiverCountry">DE</Key>
+      <Incoming>0</Incoming>
+      <Outgoing>0</Outgoing>
+    </Subtotal>
+    <Subtotal type="PerSP-DT-PR-CC">
+      <Key metaSchemeID="SP" schemeID="CertSubjectCN">POP000002</Key>
+      <Key metaSchemeID="DT" schemeID="busdox-docid-qns">urn:oasis:names:specification:ubl:schema:xsd:Order-2::Order##urn:fdc:peppol.eu:poacc:trns:order:3::2.1</Key>
+      <Key metaSchemeID="PR" schemeID="cenbii-procid-ubl">cenbii-procid-ubl::urn:fdc:peppol.eu:poacc:bis:ordering:3</Key>
+      <Key metaSchemeID="CC" schemeID="SenderCountry">DE</Key>
+      <Key metaSchemeID="CC" schemeID="ReceiverCountry">DE</Key>
+      <Incoming>0</Incoming>
+      <Outgoing>0</Outgoing>
+    </Subtotal>
+    <Subtotal type="PerSP-DT-PR-CC">
+      <Key metaSchemeID="SP" schemeID="CertSubjectCN">POP000002</Key>
+      <Key metaSchemeID="DT" schemeID="busdox-docid-qns">urn:oasis:names:specification:ubl:schema:xsd:OrderResponse-2::OrderResponse##urn:fdc:peppol.eu:poacc:trns:order_response:3::2.1</Key>
+      <Key metaSchemeID="PR" schemeID="cenbii-procid-ubl">cenbii-procid-ubl::urn:fdc:peppol.eu:poacc:bis:ordering:3</Key>
+      <Key metaSchemeID="CC" schemeID="SenderCountry">DE</Key>
+      <Key metaSchemeID="CC" schemeID="ReceiverCountry">AT</Key>
+      <Incoming>7</Incoming>
+      <Outgoing>0</Outgoing>
+    </Subtotal>
+    <Subtotal type="PerSP-DT-PR-CC">
+      <Key metaSchemeID="SP" schemeID="CertSubjectCN">POP000002</Key>
+      <Key metaSchemeID="DT" schemeID="busdox-docid-qns">urn:oasis:names:specification:ubl:schema:xsd:OrderResponse-2::OrderResponse##urn:fdc:peppol.eu:poacc:trns:order_response:3::2.1</Key>
+      <Key metaSchemeID="PR" schemeID="cenbii-procid-ubl">cenbii-procid-ubl::urn:fdc:peppol.eu:poacc:bis:ordering:3</Key>
+      <Key metaSchemeID="CC" schemeID="SenderCountry">DE</Key>
+      <Key metaSchemeID="CC" schemeID="ReceiverCountry">DE</Key>
+      <Incoming>5</Incoming>
+      <Outgoing>0</Outgoing>
+    </Subtotal>
+    <!-- endregion -->
+  </TransactionStatisticsReport>
+</StandardBusinessDocument>
