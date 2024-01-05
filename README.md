@@ -25,6 +25,8 @@ Add the following to your pom.xml to use this artifact, replacing x.y.z with the
 
 # News and noteworthy
 
+* v5.0.2 - work in progress
+    * Switched JAXB Maven plugin to `org.jvnet.jaxb:jaxb-maven-plugin` 
 * v5.0.1 - 2023-04-15
     * Deprecated classes `ESBDHDocumentType`, `SBDHDocumentType`, `SBDHReader`, `SBDHValidator` and `SBDHWriter`
 * v5.0.0 - 2023-01-08
