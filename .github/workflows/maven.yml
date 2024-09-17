@@ -18,10 +18,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Set up JDK ${{ matrix.Java }
+    - name: Set up JDK ${{ matrix.Java }}
       uses: actions/setup-java@v4
       with:
-        java-version: ${{ matrix.Java }
+        java-version: ${{ matrix.Java }}
         distribution: 'adopt'
         server-id: ossrh # Value of the distributionManagement/repository/id field of the pom.xml
         server-username: MAVEN_USERNAME
