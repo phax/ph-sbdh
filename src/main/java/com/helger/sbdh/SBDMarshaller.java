@@ -37,6 +37,15 @@ public class SBDMarshaller extends GenericJAXBMarshaller <StandardBusinessDocume
     this (true);
   }
 
+  /**
+   * Deprecated constructor
+   *
+   * @param bValidationEnabled
+   *        <code>true</code> to enable XSD validation, <code>false</code> to
+   *        disable it.
+   * @deprecated Use {@link #setUseSchema(boolean)} instead
+   */
+  @Deprecated (forRemoval = true, since = "5.0.2")
   public SBDMarshaller (final boolean bValidationEnabled)
   {
     super (StandardBusinessDocument.class,

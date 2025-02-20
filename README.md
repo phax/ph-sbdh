@@ -25,7 +25,8 @@ Add the following to your pom.xml to use this artifact, replacing x.y.z with the
 
 # News and noteworthy
 
-* v5.0.2 - work in progress
+* v5.0.2 - 2025-02-20
+    * Deprecated marshaller constructors with a `boolean` parameter
     * Switched JAXB Maven plugin to `org.jvnet.jaxb:jaxb-maven-plugin` 
 * v5.0.1 - 2023-04-15
     * Deprecated classes `ESBDHDocumentType`, `SBDHDocumentType`, `SBDHReader`, `SBDHValidator` and `SBDHWriter`
