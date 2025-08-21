@@ -16,11 +16,10 @@
  */
 package com.helger.sbdh;
 
-import javax.annotation.concurrent.NotThreadSafe;
-
 import org.unece.cefact.namespaces.sbdh.ObjectFactory;
 import org.unece.cefact.namespaces.sbdh.StandardBusinessDocument;
 
+import com.helger.annotation.concurrent.NotThreadSafe;
 import com.helger.jaxb.GenericJAXBMarshaller;
 
 /**

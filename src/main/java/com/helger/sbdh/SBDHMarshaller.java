@@ -16,15 +16,15 @@
  */
 package com.helger.sbdh;
 
-import javax.annotation.Nonnull;
-import javax.annotation.concurrent.NotThreadSafe;
-
 import org.unece.cefact.namespaces.sbdh.ObjectFactory;
 import org.unece.cefact.namespaces.sbdh.StandardBusinessDocumentHeader;
 
-import com.helger.commons.annotation.ReturnsMutableCopy;
+import com.helger.annotation.concurrent.NotThreadSafe;
+import com.helger.annotation.style.ReturnsMutableCopy;
 import com.helger.jaxb.GenericJAXBMarshaller;
 import com.helger.xml.namespace.MapBasedNamespaceContext;
+
+import jakarta.annotation.Nonnull;
 
 /**
  * This is the reader and writer for SBDH 1.3 documents. This class may be
