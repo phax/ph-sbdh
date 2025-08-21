@@ -23,8 +23,8 @@ import com.helger.annotation.concurrent.NotThreadSafe;
 import com.helger.jaxb.GenericJAXBMarshaller;
 
 /**
- * This is the reader and writer for SBD 1.3 documents. This class may be
- * derived to override protected methods from {@link GenericJAXBMarshaller}.
+ * This is the reader and writer for SBD 1.3 documents. This class may be derived to override
+ * protected methods from {@link GenericJAXBMarshaller}.
  *
  * @author Philip Helger
  */
@@ -33,23 +33,7 @@ public class SBDMarshaller extends GenericJAXBMarshaller <StandardBusinessDocume
 {
   public SBDMarshaller ()
   {
-    this (true);
-  }
-
-  /**
-   * Deprecated constructor
-   *
-   * @param bValidationEnabled
-   *        <code>true</code> to enable XSD validation, <code>false</code> to
-   *        disable it.
-   * @deprecated Use {@link #setUseSchema(boolean)} instead
-   */
-  @Deprecated (forRemoval = true, since = "5.0.2")
-  public SBDMarshaller (final boolean bValidationEnabled)
-  {
-    super (StandardBusinessDocument.class,
-           bValidationEnabled ? CSBDH.SBDH_XSDS : null,
-           new ObjectFactory ()::createStandardBusinessDocument);
+    super (StandardBusinessDocument.class, CSBDH.SBDH_XSDS, new ObjectFactory ()::createStandardBusinessDocument);
 
     setNamespaceContext (SBDHMarshaller.createDefaultNamespaceContext ());
   }

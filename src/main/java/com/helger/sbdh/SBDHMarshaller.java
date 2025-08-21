@@ -27,8 +27,8 @@ import com.helger.xml.namespace.MapBasedNamespaceContext;
 import jakarta.annotation.Nonnull;
 
 /**
- * This is the reader and writer for SBDH 1.3 documents. This class may be
- * derived to override protected methods from {@link GenericJAXBMarshaller}.
+ * This is the reader and writer for SBDH 1.3 documents. This class may be derived to override
+ * protected methods from {@link GenericJAXBMarshaller}.
  *
  * @author Philip Helger
  */
@@ -46,22 +46,8 @@ public class SBDHMarshaller extends GenericJAXBMarshaller <StandardBusinessDocum
 
   public SBDHMarshaller ()
   {
-    this (true);
-  }
-
-  /**
-   * Deprecated constructor
-   *
-   * @param bValidationEnabled
-   *        <code>true</code> to enable XSD validation, <code>false</code> to
-   *        disable it.
-   * @deprecated Use {@link #setUseSchema(boolean)} instead
-   */
-  @Deprecated (forRemoval = true, since = "5.0.2")
-  public SBDHMarshaller (final boolean bValidationEnabled)
-  {
     super (StandardBusinessDocumentHeader.class,
-           bValidationEnabled ? CSBDH.SBDH_XSDS : null,
+           CSBDH.SBDH_XSDS,
            new ObjectFactory ()::createStandardBusinessDocumentHeader);
 
     setNamespaceContext (createDefaultNamespaceContext ());
