@@ -189,7 +189,6 @@
           <sourcepath>
             ${project.build.sourceDirectory}:${project.build.directory}/generated-sources/sbdh
           </sourcepath>
-          <addSources>true</addSources>
         </configuration>
       </plugin> 
     </plugins>
