@@ -1,8 +1,9 @@
 # ph-sbdh
 
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.helger/ph-sbdh/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.helger/ph-sbdh) 
+<!-- ph-badge-start -->
+[![Sonatype Central](https://maven-badges.sml.io/sonatype-central/com.helger/ph-sbdh/badge.svg)](https://maven-badges.sml.io/sonatype-central/com.helger/ph-sbdh/)
 [![javadoc](https://javadoc.io/badge2/com.helger/ph-sbdh/javadoc.svg)](https://javadoc.io/doc/com.helger/ph-sbdh)
-[![CodeCov](https://codecov.io/gh/phax/ph-sbdh/branch/master/graph/badge.svg)](https://codecov.io/gh/phax/ph-sbdh)
+<!-- ph-badge-end -->
 
 CEFACT Standard Business Document (SBD) and Standard Business Document Header (SBDH) wrapper library.
 It supports easily reading and writing of SBD and SBDH between Java domain objects and XML representations.
