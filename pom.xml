@@ -26,12 +26,11 @@
   </parent>
   <artifactId>ph-sbdh</artifactId>
   <version>6.1.1-SNAPSHOT</version>
-  <packaging>bundle</packaging>
+  <packaging>jar</packaging>
   <name>ph-sbdh</name>
   <description>Library for reading and writing CEFACT Standard Business Document (SBD) and Standard Business Document Header (SBDH) documents</description>
   <url>https://github.com/phax/ph-sbdh</url>
   <inceptionYear>2014</inceptionYear>
-  
   <licenses>
     <license>
       <name>Apache 2</name>
@@ -39,19 +38,16 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
-
   <scm>
     <connection>scm:git:https://github.com/phax/ph-sbdh.git</connection>
     <developerConnection>scm:git:https://github.com/phax/ph-sbdh.git</developerConnection>
     <url>https://github.com/phax/ph-sbdh</url>
     <tag>HEAD</tag>
   </scm>
-
   <organization>
     <name>Philip Helger</name>
     <url>https://www.helger.com</url>
   </organization>
-
   <developers>
     <developer>
       <id>phax</id>
@@ -60,14 +56,12 @@
       <url>https://www.helger.com</url>
     </developer>
   </developers>
-  
   <properties>
     <jaxb-plugin.group>org.jvnet.jaxb</jaxb-plugin.group>
     <jaxb-plugin.artifact>jaxb-maven-plugin</jaxb-plugin.artifact>
     <jaxb-plugin.version>4.0.12</jaxb-plugin.version>
     <ph-jaxb-plugin.version>5.1.2</ph-jaxb-plugin.version>
   </properties>
-
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -79,7 +73,6 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
-
   <dependencies>
     <dependency>
       <groupId>com.helger.commons</groupId>
@@ -93,7 +86,6 @@
       <groupId>com.helger.commons</groupId>
       <artifactId>ph-jaxb</artifactId>
     </dependency>
-
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -115,22 +107,8 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  
   <build>
     <plugins>
-      <plugin>
-        <groupId>org.apache.felix</groupId>
-        <artifactId>maven-bundle-plugin</artifactId>
-        <extensions>true</extensions>
-        <configuration>
-          <instructions>
-            <Automatic-Module-Name>com.helger.sbdh</Automatic-Module-Name>
-            <Export-Package>com.helger.sbdh.*,
-              org.unece.cefact.namespaces.sbdh.*</Export-Package>
-            <Import-Package>!org.jspecify.annotations.*,*</Import-Package>
-          </instructions>
-        </configuration>
-      </plugin>
       <plugin>
         <groupId>${jaxb-plugin.group}</groupId>
         <artifactId>${jaxb-plugin.artifact}</artifactId>
@@ -191,7 +169,7 @@
             ${project.build.sourceDirectory}:${project.build.directory}/generated-sources/sbdh
           </sourcepath>
         </configuration>
-      </plugin> 
+      </plugin>
     </plugins>
   </build>
 </project>
