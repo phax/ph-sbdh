@@ -41,14 +41,14 @@ public final class CSBDH
   }
 
   /**
-   * XML Schema resources for SBDH 1.3 - since include is used, the other
-   * schemas must not be specified.
+   * XML Schema resources for SBDH 1.3 - since include is used, the other schemas must not be
+   * specified.
    */
   public static final String SBDH_XSD_PATH = "/external/schemas/sbdh/StandardBusinessDocumentHeader.xsd";
 
   /**
-   * XML Schema resources for SBDH 1.3 - since include is used, the other
-   * schemas must not be specified.
+   * XML Schema resources for SBDH 1.3 - since include is used, the other schemas must not be
+   * specified.
    */
   @CodingStyleguideUnaware
   public static final List <ClassPathResource> SBDH_XSDS = new CommonsArrayList <> (new ClassPathResource (SBDH_XSD_PATH,
